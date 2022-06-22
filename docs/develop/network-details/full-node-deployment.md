@@ -1,7 +1,7 @@
 ---
 id: full-node-deployment
 title: Set up a Full Node
-description: Build your next blockchain app on Polygon.
+description: Deploy a Full Node using Ansible.
 keywords:
   - docs
   - matic

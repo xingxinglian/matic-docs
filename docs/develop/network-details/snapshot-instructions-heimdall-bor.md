@@ -1,7 +1,7 @@
 ---
 id: snapshot-instructions-heimdall-bor
 title: Heimdall and Bor Snapshots
-description: Snapshot Instructions for Heimdall and Bor
+description: Heimdall and Bor snapshot Instructions for faster syncing.
 keywords:
   - docs
   - matic

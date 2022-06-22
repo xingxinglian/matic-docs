@@ -1,7 +1,7 @@
 ---
 id: full-node-binaries
 title: Full Node Binaries
-description: Build your next blockchain app on Polygon.
+description: Deploy a Full Node using binaries.
 keywords:
   - docs
   - matic

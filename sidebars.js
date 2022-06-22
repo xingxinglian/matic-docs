@@ -54,6 +54,9 @@ develop: [
     {
       type: "category",
       label: "Nodes",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "develop/network-details/technical-requirements",
         "develop/network-details/full-node-deployment",

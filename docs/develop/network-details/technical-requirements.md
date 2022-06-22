@@ -1,7 +1,7 @@
 ---
 id: technical-requirements
 title: Technical Requirements
-description: Build your next blockchain app on Polygon.
+description: Minimal hardware configuration for setting up a full node.
 keywords:
   - docs
   - matic

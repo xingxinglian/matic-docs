@@ -2,7 +2,7 @@
 id: network-rpc-endpoints
 title: Network Endpoints
 sidebar_label: Endpoints
-description: Network endpoints for Polyon PoS mainnet and testnet
+description: Network endpoints for Polyon PoS mainnet and testnet.
 keywords:
   - docs
   - polygon
