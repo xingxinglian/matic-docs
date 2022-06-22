@@ -1,11 +1,15 @@
 ---
 id: getting-started
-title: Getting started with Polygon Edge
-sidebar_label: Instantiating Polygon Edge
-description: Build your next blockchain app on Polygon.
+title: Getting Started with Matic.js
+sidebar_label: Instantiating Matic.js
+description: Learn how you can use Matic.js to interact with the Polygon PoS chain.
 keywords:
   - docs
   - matic
+  - polygon
+  - sdk
+  - maticjs
+  - pos
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 

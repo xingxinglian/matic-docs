@@ -343,7 +343,7 @@ develop: [
             "develop/ethereum-polygon/pos/getting-started",
             {
               type: "category",
-              label: "Using Polygon Edge",
+              label: "Using Matic.js",
               items: [
                 "develop/ethereum-polygon/pos/using-sdk/getting-started",
                 "develop/ethereum-polygon/pos/using-sdk/eth",

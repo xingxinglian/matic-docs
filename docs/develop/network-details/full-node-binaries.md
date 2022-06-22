@@ -39,12 +39,11 @@ For snapshot download links, see [Polygon Chains Snapshots](https://snapshots.ma
 
 ## Prerequisites
 
-
 - One machine is needed.
 - `build-essential` installed on the Full Node machine.
 - To install:
 - `sudo apt-get install build-essential`
-- Go 1.17 installed on both the Full Node machine.
+- Go 1.18 installed on both the Full Node machine.
 
 <!-- ### To install
 
@@ -90,7 +89,7 @@ bash go-install.sh
 sudo ln -nfs ~/.go/bin/go /usr/bin/go
 ```
 
-> Note: Go version 1.17 is recommended
+> Note: Go version 1.18 is recommended
 
 ### RabbitMq
 
@@ -369,12 +368,12 @@ sudo apt-get install build-essential
 ***This is required for your full node***
 
 ```bash
-wget https://gist.githubusercontent.com/ssandeep/a6c7197811c83c71e5fead841bab396c/raw/go-install.sh
+wget https://raw.githubusercontent.com/maticnetwork/node-ansible/master/go-install.sh
 bash go-install.sh
 sudo ln -nfs ~/.go/bin/go /usr/bin/go
 ```
 
-> Note: Go version 1.17 is recommended
+> Note: Go version 1.18 is recommended
 
 ## Install Binaries
 

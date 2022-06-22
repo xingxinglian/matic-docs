@@ -44,12 +44,12 @@ see [Run a Validator Node with Ansible](run-validator-ansible.md).
   sudo apt-get install build-essential
   ```
 
-* Go 1.17 installed on both the sentry and the validator machines.
+* Go 1.18 installed on both the sentry and the validator machines.
 
   To install:
 
   ```sh
-  wget https://gist.githubusercontent.com/ssandeep/a6c7197811c83c71e5fead841bab396c/raw/go-install.sh
+  wget https://raw.githubusercontent.com/maticnetwork/node-ansible/master/go-install.sh
   bash go-install.sh
   sudo ln -nfs ~/.go/bin/go /usr/bin/go
   ```

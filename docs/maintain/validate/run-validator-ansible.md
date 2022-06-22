@@ -464,7 +464,7 @@ heimdallcli generate-validatorkey ETHEREUM_PRIVATE_KEY
 ```
 
 :::note
-* ETHEREUM_PRIVATE_KEY — your Ethereum private key.
+* ETHEREUM_PRIVATE_KEY — your Ethereum wallet address.
 :::
 
 This will generate `priv_validator_key.json`. Move the generated JSON file to the Heimdall configuration directory:

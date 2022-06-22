@@ -1,7 +1,9 @@
 ---
 id: full-node-deployment
-title: Set up a Full Node
+
+title: Full Node Ansible
 description: Deploy a Full Node using Ansible.
+
 keywords:
   - docs
   - matic
@@ -20,19 +22,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 }>
 <TabItem value="mumbai">
 
-## Pre-requisites
-
-### Minimum System Requirements
-
-- Minimum system requirements are as follows:
-
-    16 - 32 GiB of memory
-
-    4 - 8 core CPU (t3 xLarge)
-
-    Minimum 650GB SSD (make sure it is extendable)
-
-# Full Node Deployment (Mumbai testnet)
+## Full Node Deployment (Mumbai testnet)
 
 We have created simple Ansible playbooks to setup a full node.
 
@@ -113,19 +103,8 @@ Setup full node for Testnetv4/Mumbai testnet
 </TabItem>
 <TabItem value="mainnet">
 
-## Pre-requisites
+## Full Node Deployment (Polygon mainnet)
 
-### Minimum System Requirements
-
-- Minimum system requirements are as follows:
-
-    16 - 32 GiB of memory
-
-    4 - 8 core CPU (t3 xLarge)
-
-    Minimum 650GB SSD (make sure it is extendable)
-
-# Full Node Deployment (Polygon mainnet)
 We have created simple Ansible playbooks to setup a full node.
 
 Pre-requisite:
