@@ -89,7 +89,7 @@ containing network details.
 ## RPC API Methods
 
 Developers can interact with on-chain data and send different types of transactions to 
-the network by utilizing network endpoints. The APIs follows a JSON-RPC standard;
+the network by utilizing network endpoints. The APIs follow a JSON-RPC standard;
 JSON-RPC is a stateless, lightweight, remote procedure call (RPC) protocol that is 
 commonly used when interacting with a blockchain network.
 
@@ -98,7 +98,7 @@ commonly used when interacting with a blockchain network.
 Start by visiting the complete set of API documentation for standard 
 [**Polygon JSON-RPC calls**](https://edge-docs.polygon.technology/docs/get-started/json-rpc-commands/).
 
-If you want to get started with API requests that require no set-up, fix failing requests, or, 
+If you want to get started with API requests that require no setup, fix failing requests, or, 
 explore new methods on the Polygon network, try out the [**Composer App**](https://composer.alchemyapi.io?composer_state=%7B%22chain%22%3A2%2C%22network%22%3A401%2C%22methodName%22%3A%22eth_getBlockByNumber%22%2C%22paramValues%22%3A%5B%22latest%22%2Cfalse%5D%7D).
 
 :::

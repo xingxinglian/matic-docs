@@ -22,7 +22,7 @@ For the latest snapshot, please visit [here](https://snapshots.matic.today).
 
 ## Heimdall Snapshot
 
-First, you need to set up your node with **pre-requisites** as per the node setup guide. Before you start services for Heimdall to sync, follow the steps below to use the snapshot:
+First, you need to set up your node with **prerequisites** as per the node setup guide. Before you start services for Heimdall to sync, follow the steps below to use the snapshot:
 
 1. Download the snapshot tar file of Heimdall on your VM by running the following command:
 
@@ -51,7 +51,7 @@ tar -xzvf heimdall-snapshot-2021-09-12.tar.gz -C ~/.heimdalld/data/
 
 ## Bor Snapshot
 
-First, you need to set up your node with **pre-requisites**, as per the node setup guide. Before you start services for Bor to sync, follow the steps below to use the snapshot:
+First, you need to set up your node with **prerequisites**, as per the node setup guide. Before you start services for Bor to sync, follow the steps below to use the snapshot:
 
 1. Download the snapshot tar file of Bor on your VM by running the following command:
 ```

@@ -60,10 +60,9 @@ sudo ln -nfs ~/.go/bin/go /usr/bin/go
 
 <!-- RabbitMQ installed on both the Full Node machines. See Downloading and Installing RabbitMQ. -->
 
-
 ## Overview
 
-- Have the one machine prepared.
+- Have the machine prepared.
 - Install the Heimdall and Bor binaries on the Full Node machine.
 - Set up the Heimdall and Bor services on the Full Node machines.
 - Configure the Full node.
@@ -95,9 +94,11 @@ sudo ln -nfs ~/.go/bin/go /usr/bin/go
 
 RabbitMQ is a message-queueing software also known as a message broker or queue manager. Simply said; it is software where queues are defined, to which applications connect in order to transfer a message or messages.
 
-A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward.
+A helper service called `bridge` which is embedded into Heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward.
 
 **Checkout the download instructions here: [https://www.rabbitmq.com/download.html](https://www.rabbitmq.com/download.html)**
+
+To start a RabbitMQ node, run:
 
 ```bash
 rabbitmq-server
@@ -107,7 +108,7 @@ rabbitmq-server
 
 ### Heimdall
 
-Next, install the latest version of Heimdall and services. Make sure you git checkout the correct [released version](https://github.com/maticnetwork/heimdall/releases)
+Next, install the latest version of Heimdall. Make sure you git checkout the correct [release version](https://github.com/maticnetwork/heimdall/releases).
 
 ```bash
 cd ~/
@@ -151,7 +152,7 @@ That will install the `bor` binary and `bootnode` binary:
 bor version
 ```
 
-## Setup node files
+## Set up node files
 
 ### Fetch launch repo
 
@@ -160,9 +161,9 @@ cd ~/
 git clone https://github.com/maticnetwork/launch
 ```
 
-### Setup launch directory
+### Set up launch directory
 
-To setup network directory, network name and type of node are required.
+To set up the network directory, network name and type of node are required.
 
 Available networks: `mainnet-v1` and `testnet-v4`
 
@@ -177,7 +178,7 @@ cp -rf launch/<network-name>/sentry/<node-type>/* ~/node
 # cp -rf launch/testnet-v4/sentry/sentry/* ~/node
 ```
 
-### Setup network directories
+### Configure network directories
 
 **Heimdall data setup**
 
@@ -193,7 +194,7 @@ cd ~/node/bor
 bash setup.sh
 ```
 
-## Setup service files
+## Configure Service Files
 
 Download service.sh file
 
@@ -219,7 +220,7 @@ bash service.sh
 sudo cp *.service /etc/systemd/system/
 ```
 
-## Setup config files
+## Set Up Configuration Files
 
 **For Mumbai Testnet**
 
@@ -285,16 +286,14 @@ journalctl -u bor.service -f
 
 ### **Ports and firewall setup**
 
-Open following ports 22, 26656 and 30303 to world (0.0.0.0/0) on sentry node firewall.
+Open ports 22, 26656 and 30303 to world (0.0.0.0/0) on sentry node firewall.
 
-You can use VPN to restrict access for 22 port as per your requirement and security guidelines.
+You can use VPN to restrict access for port 22 as per your requirement and security guidelines.
 
 
 </TabItem>
 
 <TabItem value="mainnet">
-
-# Polygon Full Node Setup Using Binaries
 
 This section guides you through starting and running a full node on a binary.
 
@@ -315,36 +314,15 @@ For snapshot download links, see [Polygon Chains Snapshots](https://snapshots.ma
 
 - One machine is required.
 - `build-essential` installed on the Full Node machine.
-- To install:
-- `sudo apt-get install build-essential`
-- Go 1.17 installed on both the Full Node machine.
-
-<!-- ### To install
+- To install: 
 
 ```bash
-wget https://gist.githubusercontent.com/ssandeep/a6c7197811c83c71e5fead841bab396c/raw/go-install.sh
-```
-
-```bash
-go-install.sh
-```
-
-```bash
-sudo ln -nfs ~/.go/bin/go /usr/bin/go
-```
-
-RabbitMQ installed on both the Full Node machines. See Downloading and Installing RabbitMQ. -->
-
-<!-- - Two machines — one local machine on which you will run the Ansible playbook; one remote machine — for Full Node.
-- On the local machine, Ansible installed.
-- On the local machine, Python 3.x installed.
-- On the remote machine, make sure Go is not installed.
-- On the remote machine, your local machine's SSH public key is on the remote machine to let Ansible connect to them. -->
-
+sudo apt-get install build-essential
+- Go 1.17 installed.
 
 ## Overview
 
-- Have the one machine prepared.
+- Have the machine prepared.
 - Install the Heimdall and Bor binaries on the Full Node machine.
 - Set up the Heimdall and Bor services on the Full Node machine.
 - Configure the Full node.
@@ -442,7 +420,7 @@ That will install the `bor` binary and `bootnode` binary:
 bor version
 ```
 
-## Setup node files
+## Configure Node Files
 
 ### Fetch launch repo
 
@@ -451,9 +429,9 @@ cd ~/
 git clone https://github.com/maticnetwork/launch
 ```
 
-### Setup launch directory
+### Configure launch directory
 
-To setup network directory, network name and type of node are required.
+To set up the network directory, the network name and type of node are required.
 
 Available networks: `mainnet-v1`
 
@@ -468,7 +446,7 @@ cp -rf launch/<network-name>/sentry/<node-type>/* ~/node
 # cp -rf launch/mainnet-v1/sentry/sentry/* ~/node
 ```
 
-### Setup network directories
+### Configure network directories
 
 **Heimdall data setup**
 
@@ -484,9 +462,9 @@ cd ~/node/bor
 bash setup.sh
 ```
 
-## Setup service files
+## Configure Service Files
 
-Download service.sh file
+Download service.sh file.
 
 ```bash
 cd ~/node
@@ -495,14 +473,15 @@ wget https://raw.githubusercontent.com/maticnetwork/launch/master/<network-name>
 # wget https://raw.githubusercontent.com/maticnetwork/launch/master/mainnet-v1/service.sh
 ```
 
-Generate the metadata file
+Generate the metadata file:
+
 ```bash
 sudo mkdir -p /etc/matic
 sudo chmod -R 777 /etc/matic/
 touch /etc/matic/metadata
 ```
 
-Generate services files and copy them into system directory
+Generate services files and copy them into system directory:
 
 ```bash
 cd ~/node
@@ -512,10 +491,10 @@ sudo cp *.service /etc/systemd/system/
 
 
 
-## Setup config files
+## Set up config files
 
-- Login to the remote machine / VM
-- You will need to add a few details in the `config.toml` file. To open the `config.toml` file run the following command `vi ~/.heimdalld/config/config.toml`
+- Log in to the remote machine / VM
+- You will need to add a few details in the `config.toml` file. To open the `config.toml` file, run the following command `vi ~/.heimdalld/config/config.toml`
 
     Now in the config file you will have to change `Moniker` and add `seeds` information
 
@@ -567,7 +546,7 @@ You check logs for Heimdall and rest-server here:
 - Heimdall - `journalctl -u heimdalld.service -f`
 - Heimdall Rest Server - `journalctl -u heimdalld-rest-server.service -f`
 
-Now you need to make sure that **Heimdall is synced** completely and only then Start Bor. If you start Bor without Heimdall syncing completely, you will run into issues frequently.
+Now you need to make sure that **Heimdall is synced** completely and only then start Bor. If you start Bor without Heimdall syncing completely, you will run into issues frequently.
 
 - To check if Heimdall is synced
     - On the remote machine/VM, run `curl localhost:26657/status`
