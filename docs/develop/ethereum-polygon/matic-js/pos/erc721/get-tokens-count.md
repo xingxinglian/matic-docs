@@ -3,7 +3,7 @@ id: get-tokens-count
 title: getTokensCount
 keywords: 
 - 'pos client, erc721, getTokensCount, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Get  tokens count for specified user.'
 ---
 
 `getTokensCount` method returns tokens count for specified user.

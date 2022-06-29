@@ -3,7 +3,7 @@ id: withdraw-exit-many
 title: withdrawExitMany
 keywords: 
 - 'plasma client, erc721, withdrawExitMany, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Exit the withdraw process.'
 ---
 
 `withdrawExitMany` method can be used to approve all tokens.

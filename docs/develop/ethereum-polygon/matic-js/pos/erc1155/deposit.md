@@ -3,7 +3,7 @@ id: deposit
 title: deposit
 keywords: 
 - 'pos client, erc1155, deposit, polygon, sdk'
-description: 'Deposit erc1155 token using matic.js'
+description: 'Deposit ERC1155 token using matic.js'
 ---
 
 `deposit` method can be used to deposit required amount of a token from ethereum to polygon chain.

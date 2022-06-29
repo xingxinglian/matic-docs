@@ -1,7 +1,7 @@
 ---
 id: mapping-assets
 title: Mapping Assets using POS
-description: Build your next blockchain app on Polygon.
+description: "Mapping assets from Polygon to Ethereum."
 keywords:
   - docs
   - matic

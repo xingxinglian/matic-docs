@@ -3,7 +3,7 @@ id: withdraw-confirm-faster
 title: withdrawChallengeFaster
 keywords: 
 - 'plasma client, erc721, withdrawChallengeFaster, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Confirm withdraw generating proof in backend.'
 ---
 
 `withdrawConfirmFaster` method is the second step in plasma withdraw process. In this step, proof of your burn transaction (first transaction) is submitted and an erc721 token of equivalent value is created.

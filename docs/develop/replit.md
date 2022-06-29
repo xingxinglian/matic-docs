@@ -2,7 +2,7 @@
 id: replit
 title: Using Replit
 sidebar_label: Using Replit
-description: Build your next blockchain app on Polygon.
+description: Deploy Smart Contracts using ReplotIDE. 
 keywords:
   - docs
   - matic

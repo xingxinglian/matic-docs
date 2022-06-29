@@ -1,7 +1,7 @@
 ---
 id: genesis-contracts
 title: Genesis Contracts
-description: Build your next blockchain app on Polygon.
+description: Genesis contracts list.
 keywords:
   - docs
   - matic

@@ -2,7 +2,7 @@
 id: getting-started
 title: Getting Started
 sidebar_label: Getting Started
-description: Build your next blockchain app on Polygon.
+description: "Available solutions for fetching off-chain data."
 keywords:
   - docs
   - matic

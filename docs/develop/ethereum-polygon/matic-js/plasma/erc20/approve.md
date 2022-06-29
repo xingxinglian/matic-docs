@@ -3,7 +3,7 @@ id: approve
 title: approve
 keywords: 
 - 'pos client, erc20, approve, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Approve required amount on root token.'
 ---
 
 `approve` method can be used to approve required amount on root token.

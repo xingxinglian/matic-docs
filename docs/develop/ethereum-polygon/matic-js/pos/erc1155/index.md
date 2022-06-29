@@ -3,7 +3,7 @@ id: index
 title: POSClient
 keywords: 
 - 'pos client, erc1155, contract, polygon, sdk'
-description: 'Interact with erc1155 token using matic.js'
+description: 'Interact with ERC1155 token using matic.js.'
 ---
 
 # ERC1155

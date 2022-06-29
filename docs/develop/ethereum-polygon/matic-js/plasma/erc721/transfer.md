@@ -3,7 +3,7 @@ id: transfer
 title: transfer
 keywords: 
 - 'plasma client, erc721, transfer, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Transfer tokens from one user to another user.'
 ---
 
 `transfer` method transfer tokens from one user to another user.

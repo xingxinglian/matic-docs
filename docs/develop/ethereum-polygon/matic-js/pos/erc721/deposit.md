@@ -3,7 +3,7 @@ id: deposit
 title: deposit
 keywords: 
 - 'pos client, erc721, deposit, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Deposit a token from ethereum to polygon chain.'
 ---
 
 `deposit` method can be used to deposit a token from ethereum to polygon chain.

@@ -2,7 +2,7 @@
 id: network-agnostics
 title: Network Agnostic Transactions
 sidebar_label: Network Agnostic Transactions
-description: Build your next blockchain app on Matic.
+description: "Integrate Network Agnostic Transactions in your dApp."
 keywords:
   - docs
   - matic

@@ -69,11 +69,17 @@ module.exports = {
     {
       type: "category",
       label: "Wallets",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "develop/wallets/getting-started",
         {
           type: "category",
           label: "Metamask",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/metamask/overview",
             "develop/metamask/hello",
@@ -85,6 +91,9 @@ module.exports = {
         {
           type: "category",
           label: "Wallet Link",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/metamask/config-polygon-on-wallet-link",
           ],
@@ -93,6 +102,9 @@ module.exports = {
         {
           type: "category",
           label: "Arkane",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/wallets/arkane/intro",
             "develop/wallets/arkane/create-wallet",
@@ -108,6 +120,9 @@ module.exports = {
         {
           type: "category",
           label: "Polygon Web Wallet",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/wallets/polygon-web-wallet/web-wallet-v2-guide",
             "develop/wallets/polygon-web-wallet/deposit-eth-dai-on-polygon",
@@ -118,14 +133,21 @@ module.exports = {
     {
       type: "category",
       label: "Matic.js",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "develop/ethereum-polygon/matic-js/get-started",
         "develop/ethereum-polygon/matic-js/installation",
         {
           type: "category",
           label: "Setup",
+          link: {
+            type: "generated-index",
+            title: "Supported libraries",
+            description: "In order to support multiple web3 libraries - Matic.js provides plugins. Currently two libraries are supported:"
+          },
           items: [
-            "develop/ethereum-polygon/matic-js/setup/index",
             "develop/ethereum-polygon/matic-js/setup/web3",
             "develop/ethereum-polygon/matic-js/setup/ethers",
           ]
@@ -134,11 +156,17 @@ module.exports = {
         {
           type: "category",
           label: "POS",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/ethereum-polygon/matic-js/pos/index",
             {
               type: "category",
               label: "ERC20",
+              link: {
+                type: "generated-index",
+              },
               items: [
                 "develop/ethereum-polygon/matic-js/pos/erc20/index",
                 "develop/ethereum-polygon/matic-js/pos/erc20/get-balance",
@@ -156,6 +184,9 @@ module.exports = {
             {
               type: "category",
               label: "ERC721",
+              link: {
+                type: "generated-index",
+              },
               items: [
                 "develop/ethereum-polygon/matic-js/pos/erc721/index",
                 "develop/ethereum-polygon/matic-js/pos/erc721/get-tokens-count",
@@ -182,6 +213,9 @@ module.exports = {
             {
               type: "category",
               label: "ERC1155",
+              link: {
+                type: "generated-index",
+              },
               items: [
                 "develop/ethereum-polygon/matic-js/pos/erc1155/get-balance",
                 "develop/ethereum-polygon/matic-js/pos/erc1155/approve-all",
@@ -208,9 +242,15 @@ module.exports = {
         {
           type: "category",
           label: "Plasma",
+          link: {
+            type: "generated-index",
+          },
           items: [{
             type: "category",
             label: "ERC20",
+            link: {
+              type: "generated-index",
+            },
             items: [
               "develop/ethereum-polygon/matic-js/plasma/erc20/index",
               "develop/ethereum-polygon/matic-js/plasma/erc20/get-balance",
@@ -228,6 +268,9 @@ module.exports = {
           {
             type: "category",
             label: "ERC721",
+            link: {
+              type: "generated-index",
+            },
             items: [
               "develop/ethereum-polygon/matic-js/plasma/erc721/index",
               "develop/ethereum-polygon/matic-js/plasma/erc721/get-tokens-count",
@@ -252,6 +295,9 @@ module.exports = {
         {
           type: "category",
           label: "Advanced",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/ethereum-polygon/matic-js/advanced/abi-manager",
             "develop/ethereum-polygon/matic-js/advanced/plugin",
@@ -263,10 +309,16 @@ module.exports = {
     {
       type: "category",
       label: "Assets",
+      link: {
+        type: "generated-index",
+      },
       items: [
         {
           type: "category",
           label: "Matic",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/network-details/gas-token",
             "develop/network-details/mapped-tokens",
@@ -275,6 +327,9 @@ module.exports = {
         {
           type: "category",
           label: "NFTs",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/nft-tutorial",
           ],
@@ -284,10 +339,16 @@ module.exports = {
     {
       type: "category",
       label: "Smart Contracts",
+      link: {
+        type: "generated-index",
+      },
       items: [
         {
           type: "category",
           label: "Deploying Contracts",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/alchemy",
             "develop/quicknode",
@@ -303,6 +364,9 @@ module.exports = {
         {
           type: "category",
           label: "ERC Standards",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/advanced/swap-assets",
             "develop/advanced/custom-restrictions",
@@ -311,6 +375,9 @@ module.exports = {
         {
           type: "category",
           label: "Plasma Contracts",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/advanced/calling-plasma-contracts",
           ],
@@ -320,11 +387,17 @@ module.exports = {
     {
       type: "category",
       label: "Transactions",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "develop/eip1559",
         {
           type: "category",
           label: "Meta Transactions",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/meta-transactions/meta-transactions",
             "develop/meta-transactions/network-agnostics",
@@ -335,17 +408,26 @@ module.exports = {
     {
       type: "category",
       label: "Bridges",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "develop/ethereum-polygon/getting-started",
         "develop/ethereum-polygon/submit-mapping-request",
         {
           type: "category",
           label: "PoS Bridge",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/ethereum-polygon/pos/getting-started",
             {
               type: "category",
               label: "Using Matic.js",
+              link: {
+                type: "generated-index",
+              },
               items: [
                 "develop/ethereum-polygon/pos/using-sdk/getting-started",
                 "develop/ethereum-polygon/pos/using-sdk/eth",
@@ -357,6 +439,9 @@ module.exports = {
             {
               type: "category",
               label: "Calling Contracts",
+              link: {
+                type: "generated-index",
+              },
               items: [
                 "develop/ethereum-polygon/pos/calling-contracts/ether",
                 "develop/ethereum-polygon/pos/calling-contracts/erc20",
@@ -373,6 +458,9 @@ module.exports = {
         {
           type: "category",
           label: "Plasma Bridge",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/ethereum-polygon/plasma/getting-started",
             "develop/ethereum-polygon/plasma/eth",
@@ -391,6 +479,9 @@ module.exports = {
     {
       type: "category",
       label: "Oracles",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "develop/oracles/getting-started",
         "develop/oracles/optimisticoracle",
@@ -404,6 +495,9 @@ module.exports = {
     {
       type: "category",
       label: "Storage",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "develop/ipfs",
         "develop/filecoinhelpers",
@@ -413,10 +507,16 @@ module.exports = {
     {
       type: "category",
       label: "Data",
+      link: {
+        type: "generated-index",
+      },
       items: [
         {
           type: "category",
           label: "Indexing and Querying",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/the-graph",
             {
@@ -433,10 +533,16 @@ module.exports = {
     {
       type: "category",
       label: "Miscellaneous",
+      link: {
+        type: "generated-index",
+      },
       items: [
         {
           type: "category",
           label: "Faucets",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/tools/polygon-faucet",
             "develop/tools/alchemy-faucet"
@@ -445,6 +551,9 @@ module.exports = {
         {
           type: "category",
           label: "Gas Station",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/tools/polygon-gas-station"
           ]
@@ -452,6 +561,9 @@ module.exports = {
         {
           type: "category",
           label: "Widget",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "develop/ethereum-polygon/tools/widget"
           ]
@@ -465,6 +577,9 @@ module.exports = {
     {
       type: "category",
       label: "Validator Overview",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "maintain/validator/architecture",
         "maintain/validator/responsibilities",
@@ -474,6 +589,9 @@ module.exports = {
         {
           type: "category",
           label: "Core Components",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "maintain/validator/core-components/heimdall-chain",
             "maintain/validator/core-components/bor-chain",
@@ -492,10 +610,16 @@ module.exports = {
     {
       type: "category",
       label: "Validate",
+      link: {
+        type: "generated-index",
+      },
       items: [
         {
           type: "category",
           label: "Node Deployment",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "maintain/validate/validator-node-system-requirements",
             "maintain/validate/run-validator-binaries",
@@ -505,6 +629,9 @@ module.exports = {
         {
           type: "category",
           label: "Node Management",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "maintain/port-management",
             "maintain/validate/change-signer-address",
@@ -513,6 +640,9 @@ module.exports = {
         {
           type: "category",
           label: "Staking Operations",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "maintain/validate/validator-staking-operations",
             "maintain/validate/validator-commission-operations",
@@ -522,6 +652,9 @@ module.exports = {
         {
           type: "category",
           label: "FAQ",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "maintain/validate/faq/known-issues",
             "maintain/validate/faq/how-to",
@@ -539,11 +672,17 @@ module.exports = {
     {
       type: "category",
       label: "Network Information",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "integrate/network",
         {
           type: "category",
           label: "Network Details",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "integrate/network-detail",
             {
@@ -568,6 +707,9 @@ module.exports = {
     {
       type: "category",
       label: "Advanced",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "integrate/install-gcp",
       ],
@@ -585,15 +727,24 @@ module.exports = {
     {
       type: "category",
       label: "Architecture",
+      link: {
+        type: "generated-index",
+      },
       items: [
         {
           type: "category",
           label: "Heimdall",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "pos/heimdall/overview",
             {
               type: "category",
               label: "Core Concepts",
+              link: {
+                type: "generated-index",
+              },
               items: [
                 "pos/heimdall/encoder",
                 "pos/heimdall/transactions",
@@ -608,6 +759,9 @@ module.exports = {
             {
               type: "category",
               label: "Modules",
+              link: {
+                type: "generated-index",
+              },
               items: [
                 "pos/heimdall/modules/auth",
                 "pos/heimdall/modules/bank",
@@ -626,6 +780,9 @@ module.exports = {
         {
           type: "category",
           label: "Bor",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "pos/bor/overview",
             "pos/bor/bor",
@@ -636,12 +793,18 @@ module.exports = {
         {
           type: "category",
           label: "Contracts",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "pos/contracts/stakingmanager",
             "pos/contracts/delegation",
             {
               type: "category",
               label: "Plasma Contracts",
+              link: {
+                type: "generated-index",
+              },
               items: [
                 "pos/contracts/plasma_contracts/account_based_plasma",
                 "pos/contracts/plasma_contracts/predicates",
@@ -653,6 +816,9 @@ module.exports = {
         {
           type: "category",
           label: "State Sync",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "pos/state-sync/state-sync",
             "pos/state-sync/how-state-sync-works",
@@ -676,6 +842,9 @@ module.exports = {
     {
       type: "category",
       label: "Network Deployments",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "nightfall/deployments/mainnet",
         "nightfall/deployments/testnet",
@@ -684,10 +853,16 @@ module.exports = {
     {
       type: "category",
       label: "Protocol",
+      link: {
+        type: "generated-index",
+      },
       items: [
         {
           type: "category",
           label: "Nightfall Protocol",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "nightfall/protocol/actors",
             "nightfall/protocol/contracts",
@@ -700,6 +875,9 @@ module.exports = {
         {
           type: "category",
           label: "Proposers & Challengers",
+          link: {
+            type: "generated-index",
+          },
           items: [
             "nightfall/protocol/proposers",
             "nightfall/protocol/challengers"
@@ -710,6 +888,9 @@ module.exports = {
     {
       type: "category",
       label: "Tools",
+      link: {
+        type: "generated-index",
+      },
       items: [
         "nightfall/tools/nightfall-wallet"
       ]
@@ -728,6 +909,9 @@ module.exports = {
       {
         type: "category",
         label: "Wallet FAQs",
+        link: {
+          type: "generated-index",
+        },
         items: [
           "faq/wallet-bridge-faq",
           "faq/adding-a-custom-token",

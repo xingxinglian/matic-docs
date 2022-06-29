@@ -3,7 +3,7 @@ id: withdraw-start
 title: withdraw start
 keywords: 
 - 'pos client, erc20, withdrawStart, polygon, sdk'
-description: 'withdrawStart method can be used to initiate the withdraw process which will burn the specified amount on polygon chain.'
+description: 'Initiate the withdraw process.'
 ---
 
 `withdrawStart` method can be used to initiate the withdraw process which will burn the specified amount on polygon chain.

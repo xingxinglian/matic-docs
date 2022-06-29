@@ -1,7 +1,7 @@
 ---
 id: filecoinhelpers
 title: Filecoin
-description: IPFS
+description: "Storage Helpers."
 keywords:
   - Filecoin
   - nft.storage

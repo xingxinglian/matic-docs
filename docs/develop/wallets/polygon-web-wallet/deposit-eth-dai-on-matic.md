@@ -1,7 +1,7 @@
 ---
 id: deposit-eth-dai-on-polygon
 title: How to deposit ETH/DAI on Polygon ?
-description: Build your next blockchain app on Polygon.
+description: How to get funds on Matic OpenSea.
 keywords:
   - docs
   - matic

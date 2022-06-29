@@ -3,7 +3,7 @@ id: deposit
 title: deposit
 keywords: 
 - 'pos client, erc20, approveMax, polygon, sdk'
-description: 'Get started with maticjs'
+description: ' Deposit required amount from root token to child token.'
 ---
 
 `deposit` method can be used to deposit required amount from root token to child token.

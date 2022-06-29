@@ -1,7 +1,7 @@
 ---
 id: swap-assets
 title: Swap Assets
-description: Build your next blockchain app on Polygon.
+description: "Tutorials on Plasma-backed token swaps."
 keywords:
   - docs
   - matic
