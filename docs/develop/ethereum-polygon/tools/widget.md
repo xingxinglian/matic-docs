@@ -2,7 +2,7 @@
 id: widget
 title: Wallet Widget
 sidebar_label: Wallet Widget
-description: "UI tools to execute bridge transactions."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

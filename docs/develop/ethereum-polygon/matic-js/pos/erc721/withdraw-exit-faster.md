@@ -3,7 +3,7 @@ id: withdraw-exit-faster
 title: withdrawExitFaster
 keywords: 
 - 'pos client, erc721, withdrawExitFaster, polygon, sdk'
-description: 'Exit the withdraw process using txHash from `withdrawStart`'
+description: 'Get started with maticjs'
 ---
 
 `withdrawExitFaster` method can be used to exit the withdraw process by using the txHash from `withdrawStart` method.

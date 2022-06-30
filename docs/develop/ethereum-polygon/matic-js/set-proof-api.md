@@ -5,7 +5,7 @@ keywords:
     - setProofApi
     - polygon
     - sdk
-description: Configure proof API.
+description: Config proof api
 ---
 
 You will see some of the APIs with **faster** suffix, which makes the process faster. It does so by using proof generation api in the backend which can be hosted by anyone.

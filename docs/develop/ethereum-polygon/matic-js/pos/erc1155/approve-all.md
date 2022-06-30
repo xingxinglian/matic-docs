@@ -3,7 +3,7 @@ id: approve-all
 title: approveAll
 keywords: 
 - 'pos client, erc1155, approve, polygon, sdk'
-description: 'Approve ERC1155 tokens.'
+description: 'Approve erc1155 token'
 ---
 
 # approveAll

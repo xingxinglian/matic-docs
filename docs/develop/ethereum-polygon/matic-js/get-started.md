@@ -7,7 +7,7 @@ keywords:
   - contract
   - polygon
   - sdk
-description: Get started with Matic.js
+description: Get started with maticjs
 ---
 
 The `@matic.js` is a javascript library which helps in interacting with the various components of Matic Network.

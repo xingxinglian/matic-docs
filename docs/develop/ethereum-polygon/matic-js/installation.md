@@ -7,7 +7,7 @@ keywords:
     - withdrawExit
     - polygon
     - sdk
-description: Install Matic.js and Ethereum libraries.
+description: Get started with maticjs
 ---
 
 maticjs has two parts -

@@ -2,7 +2,7 @@
 id: chainlink
 title: Chainlink
 sidebar_label: Chainlink
-description: "Decentralized oracle network with access to external data sources."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

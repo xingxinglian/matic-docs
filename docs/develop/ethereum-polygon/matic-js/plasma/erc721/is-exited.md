@@ -3,7 +3,7 @@ id: is-exited
 title: isExited
 keywords: 
 - 'plasma client, erc721, isExited, polygon, sdk'
-description: 'Checks if a withdraw has been exited.'
+description: 'Get started with maticjs'
 ---
 
 `isExited` method check if a withdraw has been exited. It returns boolean value.

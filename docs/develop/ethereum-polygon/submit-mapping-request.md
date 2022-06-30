@@ -1,7 +1,7 @@
 ---
 id: submit-mapping-request
 title: Mapping Request
-description: "Steps to submit a mapping request."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

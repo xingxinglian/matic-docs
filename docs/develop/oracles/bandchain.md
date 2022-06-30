@@ -2,7 +2,7 @@
 id: bandchain
 title: BandChain
 sidebar_label: Bandchain
-description: "Query data from traditional web APIs."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

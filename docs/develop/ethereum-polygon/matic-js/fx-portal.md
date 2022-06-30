@@ -7,7 +7,7 @@ keywords:
     - contract
     - polygon
     - sdk
-description: Polygon state-sync mechanism with no mapping.
+description: Get started with maticjs
 ---
 
 # FxPortal Bridge

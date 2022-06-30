@@ -2,7 +2,7 @@
 id: getting-started
 title: PoS Bridge
 sidebar_label: Introduction
-description: More flexibility and faster withdrawals with Polygon POS.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

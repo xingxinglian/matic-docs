@@ -1,7 +1,7 @@
 ---
 id: deployment
 title: Deployment Details
-description: "Links to relevant Deployment-related pages."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

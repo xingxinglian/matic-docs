@@ -7,7 +7,7 @@ keywords:
     - approveMax
     - polygon
     - sdk
-description: 'Seposit required amount from root token to child token.'
+description: 'deposit method can be used to deposit required amount from root token to child token.'
 ---
 
 `deposit` method can be used to deposit required amount from root token to child token.

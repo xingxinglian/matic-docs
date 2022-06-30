@@ -1,7 +1,7 @@
 ---
 id: fortmatic
 title: Fortmatic
-description: Use Formatic SDK to integrate your dApp with Polygon.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

@@ -7,7 +7,7 @@ keywords:
   - withdrawExit
   - polygon
   - sdk
-description: 'Install and set up ethers.js'
+description: 'Get started with maticjs'
 ---
 
 # Ether.js

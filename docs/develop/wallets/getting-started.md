@@ -2,7 +2,7 @@
 id: getting-started
 title: Wallets
 sidebar_label: Getting Started
-description: Get a list of supported wallets and manage key strategy.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

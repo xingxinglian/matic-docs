@@ -3,7 +3,7 @@ id: exit-util
 title: ExitUtil
 keywords: 
 - 'exit util, api type, read, write, polygon'
-description: 'Generate proof with the ExitUtil class.'
+description: 'matic.js internally use ExitUtil for generating proof'
 ---
 
 `matic.js` internally use `ExitUtil` for generating proof. It is a class which has different methods for helping with exit utilities.

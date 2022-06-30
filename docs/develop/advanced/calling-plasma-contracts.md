@@ -1,7 +1,7 @@
 ---
 id: calling-plasma-contracts
 title: Calling Plasma Contracts
-description: "Interact directly with Polygon smart contracts."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

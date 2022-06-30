@@ -2,7 +2,7 @@
 id: alchemy
 title: Using Alchemy
 sidebar_label: Using Alchemy
-description: Guide to deploy smart contracts using Alchemy.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic
