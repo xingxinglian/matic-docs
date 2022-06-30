@@ -2,7 +2,7 @@
 id: optimisticoracle
 title: UMA's Optimistic Oracle 
 sidebar_label: UMA
-description: Making use of optimistic settlements for an efficent Oracle solution.
+description: "Optimistic settlements for an efficent Oracle solution."
 keywords:   
   - docs
   - oracle

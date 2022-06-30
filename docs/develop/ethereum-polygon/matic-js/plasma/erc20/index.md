@@ -3,7 +3,7 @@ id: index
 title: PlasmaClient
 keywords: 
 - 'plasma client, erc20, contract, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Provides a method to interact with a ERC20 token.'
 ---
 
 `plasmaClient` provides `erc20` method which helps you to interact with a erc20 token.

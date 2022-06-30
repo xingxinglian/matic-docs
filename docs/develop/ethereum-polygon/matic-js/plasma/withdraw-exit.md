@@ -3,7 +3,7 @@ id: withdraw-exit
 title: withdraw exit
 keywords: 
 - 'plasma client, withdrawExit, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Exit withdraw process.'
 ---
 
 In plasma withdaw process can be exited by anyone using `withdrawExit` method. The exit process will work only after challenge period has been completed.

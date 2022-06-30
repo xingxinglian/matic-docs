@@ -2,7 +2,7 @@
 id: quicknode
 title: Using QuickNode
 sidebar_label: Using QuickNode
-description: Build and deploy a smart contract on Polygon.
+description: Deploy Smart Contracts using Brownie and Quicknode.
 keywords:
   - docs
   - matic

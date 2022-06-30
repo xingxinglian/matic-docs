@@ -3,7 +3,7 @@ id: is-approved
 title: isApproved
 keywords: 
 - 'pos client, erc721, isApproved, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Check if token is approved for a specified tokenId.'
 ---
 
 `isApproved` method checks if token is approved for specified tokenId. It returns boolean value.

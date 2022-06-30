@@ -1,7 +1,7 @@
 ---
 id: ipfs
 title: IPFS
-description: IPFS
+description: "IPFS - distributed system for storing and accessing data."
 keywords:
   - IPFS
   - matic

@@ -3,7 +3,7 @@ id: get-token-id-at-index-for-user
 title: getTokenIdAtIndexForUser
 keywords: 
 - 'pos client, erc721, getTokenIdAtIndexForUser, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Retrieve token id on supplied index for user.'
 ---
 
 `getTokenIdAtIndexForUser` method returns token id on supplied index for user.

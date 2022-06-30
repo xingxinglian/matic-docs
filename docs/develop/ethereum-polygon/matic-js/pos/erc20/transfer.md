@@ -3,7 +3,7 @@ id: transfer
 title: transfer
 keywords: 
 - 'POS client, erc20, transfer, polygon, sdk'
-description: 'transfer method can be used to transfer amount from one address to another address.'
+description: 'Transfer amount from one address to another address.'
 ---
 
 `transfer` method can be used to transfer amount from one address to another address.

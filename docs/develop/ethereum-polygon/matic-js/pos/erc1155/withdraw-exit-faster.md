@@ -3,7 +3,7 @@ id: withdraw-exit-faster
 title: withdrawExitFaster
 keywords: 
 - 'pos client, erc1155, withdrawExitFaster, polygon, sdk'
-description: 'withdrawExitFaster method can be used to exit the withdraw process by using the txHash from withdrawStart method.'
+description: 'Exit the withdraw process using txHash from withdrawStart.'
 ---
 
 `withdrawExitFaster` method can be used to exit the withdraw process by using the txHash from `withdrawStart` method.

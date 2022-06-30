@@ -1,7 +1,7 @@
 ---
 id: pos-using-metamask
 title: PoS Using Metamask
-description: PoS token transfer tutorial using metamask.
+description: "Transfer tokens between Ethereum and Polygon with Metamask."
 keywords:
   - docs
   - matic

@@ -1,7 +1,7 @@
 ---
 id: bandstandarddataset
 title: Band Standard Dataset 
-description: Build your next blockchain app on Polygon.
+description: "Price data from a decentralized oracle infrastructure."
 keywords:
   - docs
   - matic

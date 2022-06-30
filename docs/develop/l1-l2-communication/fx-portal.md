@@ -1,7 +1,7 @@
 ---
 id: fx-portal
 title: Fx-Portal
-description: Transfer state or data from Ethereum to Polygon without any mapping required
+description: "Transfer state or data from Ethereum to Polygon without mapping."
 keywords:
   - docs
   - matic

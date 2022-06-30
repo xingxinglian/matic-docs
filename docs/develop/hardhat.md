@@ -1,7 +1,7 @@
 ---
 id: hardhat
 title: Using Hardhat
-description: Build your next blockchain app on Matic.
+description: Use Hardhat to deploy a Smart Contract.
 keywords:
   - docs
   - matic

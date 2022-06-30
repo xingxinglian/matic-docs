@@ -3,7 +3,7 @@ id: withdraw-exit-many
 title: withdrawExitMany
 keywords: 
 - 'pos client, erc1155, withdrawExitMany, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Exit the withdraw process using txHash from withdrawStart.'
 ---
 
 `withdrawExitMany` method can be used to exit the withdraw process by using the txHash from `withdrawStartMany` method.

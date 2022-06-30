@@ -3,7 +3,7 @@ id: is-withdraw-exited
 title: isWithdrawExited
 keywords: 
 - 'pos client, erc1155, isWithdrawExited, polygon, sdk'
-description: 'isWithdrawExited method check if a withdraw has been exited'
+description: 'Checks if a withdraw has been exited.'
 ---
 
 `isWithdrawExited` method check if a withdraw has been exited. It returns boolean value.

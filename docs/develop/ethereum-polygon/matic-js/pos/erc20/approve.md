@@ -7,7 +7,7 @@ keywords:
     - approve
     - polygon
     - sdk
-description: approve method can be used to approve required amount on the root token.
+description: "Approve required amount on the root token."
 ---
 
 `approve` method can be used to approve required amount on the root token.

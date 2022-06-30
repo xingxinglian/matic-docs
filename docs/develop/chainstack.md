@@ -2,7 +2,7 @@
 id: chainstack
 title: Using Chainstack
 sidebar_label: Using Chainstack
-description: Build your next blockchain app on Polygon.
+description:  Use Chainstack and Foundry to develop a Smart Contract.
 keywords:
   - docs
   - matic

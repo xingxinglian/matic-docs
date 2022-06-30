@@ -3,7 +3,7 @@ id: is-check-pointed
 title: isCheckPointed
 keywords: 
 - 'plasma client, erc20, withdrawExit, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Check if a transaction has been checkpointed.'
 ---
 
 `isCheckPointed` method can be used to know if a transaction has been checkpointed.

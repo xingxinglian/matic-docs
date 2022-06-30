@@ -3,7 +3,7 @@ id: index
 title: plasmaClient
 keywords: 
 - 'plasma client, erc721, contract, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Provides an `ERC721` method to interact with a erc721 token.'
 ---
 
 # ERC721

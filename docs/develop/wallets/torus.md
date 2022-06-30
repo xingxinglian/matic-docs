@@ -1,7 +1,7 @@
 ---
 id: torus
 title: Torus
-description: Build your next blockchain app on Polygon.
+description: Torus is a non-custodial key management system for DApps. 
 keywords:
   - docs
   - matic

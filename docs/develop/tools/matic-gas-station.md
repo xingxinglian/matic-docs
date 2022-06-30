@@ -2,7 +2,7 @@
 id: polygon-gas-station
 title: Polygon Gas Station
 sidebar_label: Polygon Gas Station
-description: Build your next blockchain app on Polygon.
+description: "Gas price recommendation."
 keywords:
   - docs
   - matic

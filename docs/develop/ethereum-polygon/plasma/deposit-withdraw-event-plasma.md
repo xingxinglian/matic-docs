@@ -2,7 +2,7 @@
 id: deposit-withdraw-event-plasma
 title: Deposit and Checkpoint Event Tracking - Plasma
 sidebar_label: Deposit and Checkpoint Event Tracking
-description: Build your next blockchain app on Polygon.
+description: "Track real-time deposit and checkpoint events."
 keywords:
   - docs
   - matic

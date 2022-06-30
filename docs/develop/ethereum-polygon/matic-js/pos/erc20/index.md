@@ -7,7 +7,7 @@ keywords:
     - contract
     - polygon
     - sdk
-description: POSClient provides erc20 method which helps you to interact with an erc20 token.
+description: "Provides a method to interact with an ERC20 token."
 ---
 
 # ERC20
