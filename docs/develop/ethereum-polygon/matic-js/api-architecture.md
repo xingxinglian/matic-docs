@@ -7,7 +7,7 @@ keywords:
     - read
     - write
     - polygon
-description: Read and Write APIs plus transaction settings.
+description: The library follows common api architecture throughout
 ---
 
 The library follows common api architecture throughout and the APIs are divided into two types -

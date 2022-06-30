@@ -1,7 +1,7 @@
 ---
 id: portis
 title: Portis
-description: A web-based wallet built keeping easy user-onboarding in mind.
+description: Build your next blockchain app on Matic.
 keywords:
   - docs
   - matic

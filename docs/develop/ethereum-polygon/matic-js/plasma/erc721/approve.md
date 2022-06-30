@@ -3,7 +3,7 @@ id: approve
 title: approve
 keywords: 
 - 'plasma client, erc721, approve, polygon, sdk'
-description: 'Approve required amount on root token'
+description: 'Get started with maticjs'
 ---
 
 `approve` method can be used to approve required amount on root token.

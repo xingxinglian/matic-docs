@@ -1,7 +1,7 @@
 ﻿---
 id: mapped-tokens
 title: Mapped Tokens
-description: 'Examples about different mapped tokens on Polygon-Mainnet.'
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

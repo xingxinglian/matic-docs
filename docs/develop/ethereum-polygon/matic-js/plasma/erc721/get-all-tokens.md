@@ -3,7 +3,7 @@ id: get-all-tokens
 title: getAllTokens
 keywords: 
 - 'plasma client, erc721, getAllTokens, polygon, sdk'
-description: 'Returns all tokens owened by specified user.'
+description: 'Get started with maticjs'
 ---
 
 `getAllTokens` method returns all tokens owened by specified user.

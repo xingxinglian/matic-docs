@@ -2,7 +2,7 @@
 id: razor
 title: Razor
 sidebar_label: Razor
-description: "Data provision by validators."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

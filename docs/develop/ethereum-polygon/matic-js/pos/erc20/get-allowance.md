@@ -7,7 +7,7 @@ keywords:
     - getAllowance
     - polygon
     - sdk
-description: "Get the approved amount for the user."
+description: getAllowance method can be used to get the approved amount for the user.
 ---
 
 `getAllowance` method can be used to get the approved amount for the user.

@@ -1,7 +1,7 @@
 ---
 id: state-transfer
 title: State Transfer
-description: Transfer state or data from Ethereum to Polygon.
+description: Transfer state or data from Ethereum to Polygon without any mapping required
 keywords:
   - docs
   - matic

@@ -1,7 +1,7 @@
 ---
 id: custom-tokens
 title: Config Custom Tokens
-description: Configure custom tokens on Metamask.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

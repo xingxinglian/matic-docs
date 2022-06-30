@@ -1,7 +1,7 @@
 ---
 id: intro 
 title: Introduction
-description: Integrate an apllication with Polygon using Arkane.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

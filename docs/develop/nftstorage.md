@@ -1,7 +1,7 @@
 ---
 id: nftstorage
 title: Mint NFTs
-description: "Mint with NFT.storage and Polygon."
+description: Mint with NFT.storage and Polygon
 keywords:
   - nft.storage
   - filecoin

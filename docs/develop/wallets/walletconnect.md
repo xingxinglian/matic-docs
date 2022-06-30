@@ -1,7 +1,7 @@
 ---
 id: walletconnect
 title: Wallet Connect
-description: An open protocol that creates a DApp-Wallet communication.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

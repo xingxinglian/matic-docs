@@ -3,7 +3,7 @@ id: withdraw-confirm
 title: withdrawChallenge
 keywords: 
 - 'plasma client, erc721, withdrawChallenge, polygon, sdk'
-description: 'Confirm withdraw.'
+description: 'Get started with maticjs'
 ---
 
 `withdrawConfirm` method is the second step in plasma withdraw process. In this step, proof of your burn transaction (first transaction) is submitted and an erc721 token of equivalent value is created.

@@ -3,7 +3,7 @@ id: deposit-many
 title: depositMany
 keywords: 
 - 'pos client, erc721, depositMany, polygon, sdk'
-description: 'Deposit multiple tokens from ethereum to polygon chain.'
+description: 'Get started with maticjs'
 ---
 
 `depositMany` method can be used to deposit multiple token from ethereum to polygon chain.

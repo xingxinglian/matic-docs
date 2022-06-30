@@ -2,7 +2,7 @@
 id: chainide
 title: Using ChainIDE
 sidebar_label: Using ChainIDE
-description: Learn how to use ChainIDE to build and deploy smart contracts.
+description: Learn how to use ChainIDE to code, build, and deploy smart contracts on Polygon.
 keywords:
   - docs
   - matic

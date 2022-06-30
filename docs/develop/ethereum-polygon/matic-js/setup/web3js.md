@@ -7,7 +7,7 @@ keywords:
  - withdrawExit
  - polygon
  - sdk
-description: 'Install and set up web3.js.'
+description: 'Get started with maticjs'
 ---
 
 # Web3.js

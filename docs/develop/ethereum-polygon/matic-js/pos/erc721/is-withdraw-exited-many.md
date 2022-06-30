@@ -3,7 +3,7 @@ id: is-withdraw-exited-many
 title: isWithdrawExitedMany
 keywords: 
 - 'pos client, erc721, isWithdrawExitedMany, polygon, sdk'
-description: 'Check if withdraw has been exited for multiple tokens.'
+description: 'Get started with maticjs'
 ---
 
 `isWithdrawExitedMany` method check if withdraw has been exited for multiple tokens. It returns boolean value.

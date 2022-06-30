@@ -1,7 +1,7 @@
 ---
 id: multiple-accounts
 title: Create & Import Accounts
-description: Create and import multiple accounts.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

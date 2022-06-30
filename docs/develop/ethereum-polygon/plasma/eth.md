@@ -2,7 +2,7 @@
 id: eth
 title: ETH Deposit and Withdraw Guide
 sidebar_label: ETH
-description: "Deposit and withdraw ETH tokens on the Polygon network."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

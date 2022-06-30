@@ -2,7 +2,7 @@
 id: ether
 title: Ether Deposit and Withdraw Guide
 sidebar_label: Ether
-description: "Available functions for Ether contracts."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

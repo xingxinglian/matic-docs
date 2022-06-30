@@ -2,7 +2,7 @@
 id: remix
 title: Using Remix
 sidebar_label: Using Remix
-description: Deploy a Smart Contract with Remix.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

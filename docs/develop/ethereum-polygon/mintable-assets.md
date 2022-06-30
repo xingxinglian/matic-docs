@@ -1,7 +1,7 @@
 ---
 id: mintable-assets
 title: Polygon Mintable Assets
-description: "Create an asset on Polygon."
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic

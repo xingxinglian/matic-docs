@@ -2,7 +2,7 @@
 id: getting-started
 title: Ethereum↔Polygon Bridge
 sidebar_label: Overview
-description: A two-way transaction channel between Polygon and Ethereum.
+description: Build your next blockchain app on Polygon.
 keywords:
   - docs
   - matic
