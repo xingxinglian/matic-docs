@@ -2,7 +2,7 @@
 id: erc20
 title: ERC20 Deposit and Withdraw Guide
 sidebar_label: ERC20
-description: Build your next blockchain app on Polygon.
+description: "Available functions for ERC20 contracts."
 keywords:
   - docs
   - matic

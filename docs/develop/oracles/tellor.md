@@ -1,6 +1,6 @@
 ---
 title: Tellor
-description: A guide to get started with integrating the Tellor oracle into your Polygon contract
+description: "A guide to integratie the Tellor oracle into your Polygon contract."
 author: "Tellor"
 lang: en
 sidebar: true

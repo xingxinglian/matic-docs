@@ -3,7 +3,7 @@ id: withdraw-start-many
 title: withdrawStartMany
 keywords: 
 - 'plasma client, erc721, withdrawStartMany, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Initiate the withdraw process.'
 ---
 
 `withdrawStartMany` method can be used to initiate the withdraw process which will burn the multiple token on polygon chain.

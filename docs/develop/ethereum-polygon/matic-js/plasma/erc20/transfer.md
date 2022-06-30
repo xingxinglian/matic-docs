@@ -3,7 +3,7 @@ id: transfer
 title: transfer
 keywords: 
 - 'plasma client, erc20, transfer, polygon, sdk'
-description: 'Transfer erc20 plasma tokens'
+description: 'Transfer erc20 plasma tokens.'
 ---
 
 `transfer` method can be used to transfer amount from one address to another address.

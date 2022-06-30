@@ -2,7 +2,7 @@
 id: getting-started
 title: Plasma Bridge
 sidebar_label: Introduction
-description: Build your next blockchain app on Polygon.
+description: Interact with the Plasma bridge and the Polygon Network.
 keywords:
   - docs
   - matic

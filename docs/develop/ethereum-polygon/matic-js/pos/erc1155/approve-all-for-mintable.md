@@ -3,7 +3,7 @@ id: approve-all-for-mintable
 title: approveAllForMintable
 keywords: 
 - 'pos client, erc115, approve, polygon, sdk'
-description: 'Approve erc115 token'
+description: 'Approve ERC1155 mintable tokens.'
 ---
 
 # approveAllForMintable

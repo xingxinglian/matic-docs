@@ -3,7 +3,7 @@ id: get-balance
 title: getBalance
 keywords: 
 - 'pos client, erc20, getBalance, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Get the balance of a user.'
 ---
 
 `getBalance` method can be used to get the balance of user. It is available on both child and parent token.

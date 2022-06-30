@@ -7,7 +7,7 @@ keywords:
     - getBalance
     - polygon
     - sdk
-description: getBalance method can be used to get the balance of user.
+description: "Get the balance of a user."
 ---
 
 `getBalance` method can be used to get the balance of user. It is available on both child and parent token.

@@ -3,7 +3,7 @@ id: approve-all
 title: approveAll
 keywords: 
 - 'pos client, erc721, approveAll, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Approve all tokens.'
 ---
 
 `approveAll` method can be used to approve all tokens.

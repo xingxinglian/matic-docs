@@ -2,7 +2,7 @@
 id: deposit-withdraw-event-pos
 title: Deposit and Checkpoint Event Tracking - PoS
 sidebar_label: Deposit and Checkpoint Event Tracking
-description: Build your next blockchain app on Polygon.
+description: "Track the pace and speed of transactions on Polygon."
 keywords:
   - docs
   - matic

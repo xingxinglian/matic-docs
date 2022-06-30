@@ -2,7 +2,7 @@
 id: getting-started
 title: Getting Started with Matic.js
 sidebar_label: Instantiating Matic.js
-description: Learn how you can use Matic.js to interact with the Polygon PoS chain.
+description: "Use Matic.js to interact with the Polygon PoS chain."
 keywords:
   - docs
   - matic

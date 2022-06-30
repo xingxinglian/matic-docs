@@ -1,7 +1,7 @@
 ---
 id: truffle
 title: Using Truffle
-description: Build your next blockchain app on Matic.
+description: Use Truffle to deploy a Smart Contract.
 keywords:
   - docs
   - matic

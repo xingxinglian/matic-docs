@@ -3,7 +3,7 @@ id: withdraw-exit-faster-many
 title: withdrawExitFasterMany
 keywords: 
 - 'plasma client, erc721, withdrawExitFasterMany, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Exit the withdraw process.'
 ---
 
 `withdrawExitFasterMany` method can be used to approve all tokens.

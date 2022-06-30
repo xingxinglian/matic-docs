@@ -3,7 +3,7 @@ id: index
 title: POSClient
 keywords: 
 - 'pos client, erc721, contract, polygon, sdk'
-description: 'Get started with maticjs'
+description: '`ERC721` method which helps you to interact with a ERC721 token.'
 ---
 
 # ERC721

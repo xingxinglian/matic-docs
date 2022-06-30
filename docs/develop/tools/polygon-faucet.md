@@ -2,7 +2,7 @@
 id: polygon-faucet
 title: Polygon Faucet
 sidebar_label: Polygon Faucet
-description: Build your next blockchain app on Polygon.
+description: "Request Matic on Polygon Faucet."
 keywords:
   - docs
   - matic

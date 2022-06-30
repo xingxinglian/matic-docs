@@ -3,7 +3,7 @@ id: is-withdraw-exited
 title: isWithdrawExited
 keywords: 
 - 'pos client, erc721, isWithdrawExited, polygon, sdk'
-description: 'Get started with maticjs'
+description: ' Check if a withdraw has been exited.'
 ---
 
 `isWithdrawExited` method check if a withdraw has been exited. It returns boolean value.

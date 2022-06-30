@@ -1,7 +1,7 @@
 ---
 id: config-polygon-on-metamask
 title: Add Polygon Network
-description: Build your next blockchain app on Polygon.
+description: Integrate Polygon with Metamask.
 keywords:
   - docs
   - matic

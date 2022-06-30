@@ -3,7 +3,7 @@ id: withdraw-exit
 title: withdraw exit
 keywords: 
 - 'pos client, erc20, withdrawExit, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Exit the withdraw process.'
 ---
 
 `withdrawExit` method can be used to exit the withdraw process once challenge period has been completed.

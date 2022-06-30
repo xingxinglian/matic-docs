@@ -7,7 +7,7 @@ keywords:
     - approveMax
     - polygon
     - sdk
-description: 'approveMax method can be used to approve max amount on the root token.'
+description: 'Approve max amount on the root token.'
 ---
 
 `approveMax` method can be used to approve max amount on the root token.

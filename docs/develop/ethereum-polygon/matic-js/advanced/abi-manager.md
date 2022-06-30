@@ -3,7 +3,7 @@ id: abi-manager
 title: ABIManager
 keywords: 
 - 'abi manager, api type, read, write, polygon'
-description: 'matic.js internally use ABIManager for handling abi management for you'
+description: "Matic.js's internal ABI manager."
 ---
 
 `matic.js` internally uses `ABIManager` for handling ABI management, configuration for you. All of the ABI and config are taken from [static repo](https://github.com/maticnetwork/static).

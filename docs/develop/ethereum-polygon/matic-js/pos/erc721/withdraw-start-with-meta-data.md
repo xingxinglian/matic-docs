@@ -3,7 +3,7 @@ id: withdraw-start-with-meta-data
 title: withdrawStartWithMetaData
 keywords: 
 - 'pos client, erc721, withdrawStartWithMetaData, polygon, sdk'
-description: 'withdrawStartWithMetaData method can be used to initiate the withdraw process.'
+description: 'Initiate the withdraw processwith metadata.'
 ---
 
 `withdrawStartWithMetaData` method can be used to initiate the withdraw process which will burn the specified token on polygon chain. Under the hood it calls `withdrawWithMetadata` method on token contract.

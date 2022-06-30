@@ -3,7 +3,7 @@ id: approve-max
 title: approveMax
 keywords: 
 - 'plasma client, erc20, approveMax, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Approve max amount on root token.'
 ---
 
 `approveMax` method can be used to approve max amount on root token.

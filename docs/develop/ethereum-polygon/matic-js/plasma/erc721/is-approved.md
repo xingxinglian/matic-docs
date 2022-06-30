@@ -3,7 +3,7 @@ id: is-aproved
 title: isApproved
 keywords: 
 - 'plasma client, erc721, isApproved, polygon, sdk'
-description: 'Get started with maticjs'
+description: 'Checks if a token is approved for a specified tokenId.'
 ---
 
 `isApproved` method checks if token is approved for specified tokenId. It returns boolean value.

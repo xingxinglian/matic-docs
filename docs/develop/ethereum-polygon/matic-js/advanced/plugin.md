@@ -3,7 +3,7 @@ id: plugin
 title: Plugin
 keywords: 
 - 'plugin, api type, read, write, polygon'
-description: 'Using plugin you can inject your code into matic.js'
+description: 'Use plugin to inject code into Matic.js.'
 ---
 
 Using plugin you can inject your code into `matic.js`. It can be used to write common set of generic codes which can be provided to anyone using a package.
