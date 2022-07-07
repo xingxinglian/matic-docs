@@ -839,7 +839,7 @@ html[data-theme='dark'] .header-github-link:before {
 }
 
 .show-card {
-  background: #FAF7FE;
+  background: #ffffffe8;
   border: 3px solid #e7e9ee;
   border-radius: 25px;
   width: 100%;
