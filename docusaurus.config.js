@@ -346,8 +346,15 @@ module.exports = {
         },
         {
           label: "Support",
-          href: "https://polygon.technology/developer-support-program/",
           position: "right",
+          items: [
+            {
+              href: 'https://support.polygon.technology/support/home',
+              label: 'End-user support',
+              target: '_blank',
+              rel: null,
+            }
+          ]
         },
         {
           label: "FAQs",
