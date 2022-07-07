@@ -867,6 +867,7 @@ module.exports = {
   avail: [
     "avail/introduction/what-is-avail",
     "avail/architecture/avail-system-overview",
+    "avail/architecture/avail-kate",
     "avail/how-tos/avail-quick-start",
     "avail/node/avail-node-management",
     "avail/faq",
