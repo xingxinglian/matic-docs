@@ -24,10 +24,11 @@ The `--json` flag is supported on some commands. This flag instructs the command
 
 ## Startup Commands
 
-| **Command** | **Description**                                                                                                                                      |
-|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| server      | The default command that starts the blockchain client, by bootstrapping all modules together                                                         |
-| genesis     | Generates a *genesis.json* file, which is used to set a predefined chain state before starting the client. The structure of the genesis file is described below |
+| **Command**       | **Description**                                                                                                                                                 |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| server            | The default command that starts the blockchain client, by bootstrapping all modules together                                                                    |
+| genesis           | Generates a *genesis.json* file, which is used to set a predefined chain state before starting the client. The structure of the genesis file is described below |
+| genesis predeploy | Predeploys a Smart Contract for fresh networks                                                                                                                  |
 
 ### server flags
 
@@ -822,6 +823,85 @@ This number cannot exceed the value of max-validator-count.
 Defaults to 1.
 
 ---
+
+### genesis predeploy flags
+
+<h4><i>artifacts-path</i></h4>
+
+<Tabs>
+  <TabItem value="syntax" label="Syntax" default>
+
+    genesis predeploy [--artifacts-path PATH_TO_ARTIFACTS]
+
+  </TabItem>
+  <TabItem value="example" label="Example">
+
+    genesis predeploy --artifacts-path ./ArtifactsData.json
+
+  </TabItem>
+</Tabs>
+
+Sets the path to the contract artifacts JSON that contains the `abi`, `bytecode` and `deployedBytecode`.
+
+---
+
+<h4><i>chain</i></h4>
+
+<Tabs>
+  <TabItem value="syntax" label="Syntax" default>
+
+    genesis predeploy [--chain PATH_TO_GENESIS]
+
+  </TabItem>
+  <TabItem value="example" label="Example">
+
+    genesis predeploy --chain ./genesis.json
+
+  </TabItem>
+</Tabs>
+
+Sets the path to the `genesis.json` file that should be updated. Default `./genesis.json`.
+
+---
+
+<h4><i>constructor-args</i></h4>
+
+<Tabs>
+  <TabItem value="syntax" label="Syntax" default>
+
+    genesis predeploy [--constructor-args CONSTRUCTOR_ARGUMENT]
+
+  </TabItem>
+  <TabItem value="example" label="Example">
+
+    genesis predeploy --constructor-args 123
+
+  </TabItem>
+</Tabs>
+
+Sets the Smart Contract constructor arguments, if any. For a detailed guide on how these arguments should look like, please reference [predeployment article](/docs/edge/additional-features/predeployment).
+
+---
+
+<h4><i>predeploy-address</i></h4>
+
+<Tabs>
+  <TabItem value="syntax" label="Syntax" default>
+
+    genesis predeploy [--predeploy-address PREDEPLOY_ADDRESS]
+
+  </TabItem>
+  <TabItem value="example" label="Example">
+
+    genesis predeploy --predeploy-address 0x5555
+
+  </TabItem>
+</Tabs>
+
+Sets the address to predeploy to. Default `0x0000000000000000000000000000000000001100`.
+
+---
+
 
 ## Operator Commands
 
