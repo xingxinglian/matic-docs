@@ -24,15 +24,14 @@ There are two mechanisms to post new transactions:
 - [Off-chain](#off-chain)
 
 ### On-chain
-The process starts with a Transactor creating a transaction by calling `submitTransaction` on `Shield.sol`. The Transactor pays a fee to the Shield contract for the Transaction, which can be anything
- the Transactor decides. Ultimately this will be paid to the Proposer that incorporates the Transaction in a Block. The higher the fee, the more likely a Proposer is to pick up the Transaction.
-The Transaction call causes a Transaction event to be posted, containing the Transaction details. If the Transaction is a Deposit, the Shield contract takes payment of the Layer 1 ERC token in question.
+The process starts with a Transactor creating a transaction by calling `submitTransaction` on `Shield.sol`. The Transactor pays a fee to the Shield contract for the Transaction, which can be anything the Transactor decides. This will be paid to the Proposer that incorporates the Transaction in a Block. Currently, the proposer and the underlying Optimist instance will likely choose the higher fees to incorporate in a block, pretty much like a miner would do.
+The Transaction call causes a blockchain event to be posted, containing its details. If it is a Deposit, the Shield contract takes payment of the Layer 1 ERC token in question.
 
 ### Off-chain
-Transfer and Withdraw transactions have the option of being submitted directly to listening proposers rather than being submitted on-chain via the above process. 
-These off-chain transactions will save Transactors the on-chain submission cost (~45k gas), but they require a greater degree of trust between transactors and the proposers
-they choose to connect to. It is easier for bad acting proposers to censor transactions received off-chain than those received on-chain.
+Transfer and Withdraw transactions have the option of being submitted directly to listening proposers rather than being submitted on-chain via the above process.
+These off-chain transactions will save Transactors the on-chain submission cost of a deposit (~45k gas), but they require a greater degree of trust between transactors and the proposers they choose to connect to. It is easier for bad acting proposers to censor transactions received off-chain than those received on-chain, as these transactions are not broadcasted to all listening proposers. In this case, transactors should only consider a transaction trustable when the cooling-off period (1 week) is passed.
 
+<!-- TODO add the way payments will work on Owl release -->
 #### Off-chain transaction payments
 In the first stage there will be a solution for the payment mechanism to control the costs that the proposer incurs on gas fees.
 This mechanism will be replaced in the future by a solution that pays the right proposer amongst all the proposers and handles rollback of payment if a rollback occurs.
@@ -48,17 +47,15 @@ Off-chain transactions flow in this first stage:
     - the proposer looks up `transactionHashL2` using the `checkPayment(bytes32 transactionHashL2, uint256 transactionFee)`, and verifies that `transactionFee` is equal to or greater than the set amount of MATIC tokens to be paid
 - On successful verification, proposer will add this transaction to the mempool
 
-## Transaction receipt
+## Transaction acceptance
 When Proposers receive any transactions, they perform a range of checks to validate that the transaction is well-formed and that the proof verifies against the public input hash.
 If all the checks pass, the transaction is added to Proposer's mempool to be considered in a Block.
 
 ## Block assembly and submission
 Proposers wait until the Shield contract assigns them as the current proposer. 
-The current Proposer looks at the available Transactions and chooses one. Usually this would be the one with the highest fee, but this is an implementation choice. Proposer computes the new commitment
- Merkle Tree that would come into being were this transaction was to be added to the Shield contract next.
+The current Proposer receives, from its own internal Optimist instance, a new block containing transactions from its mempool. For each transaction, it will compute the new commitment Merkle Tree that would come into being if these transaction were to be added to the Shield contract.
 
-The current Proposer repeats this process N times, until they have assembled a Block, which contains the hashes of the Transactions included in the Block and the commitment Merkle Tree root as
- it would exist after processing all the transactions in the Block (Commitment Root). After this is done, Proposer proposes this new Block.
+The Block contains, thus, the hashes of the Transactions included in the Block and the commitment Merkle Tree root as it would exist after processing all the transactions in the Block (Commitment Root). Then the Proposer sends this block to the State smart contract.
 
 When a block is proposed, the following information is recorded on-chain:
 
@@ -116,8 +113,8 @@ For clarity, we will have two kinds of branches:
 
 ### L1 Reorg
 The transactions in the uncle branch are returned to the mempool and, from the point of view of the local node, they are replaced by those in the canonical branch.
- Eventually they will be re-mined and this may not be in the same order that they were originally created (although nonces are respected).
- Thus dependencies between the transactions may cause some to revert even though they worked on the uncle branch.
+Eventually they will be re-mined and this may not be in the same order that they were originally created (although nonces are respected).
+Thus dependencies between the transactions may cause some to revert even though they worked on the uncle branch.
 
 ### L2 Reorg
 The L2 state is updated in response to L1 emitting blockchain events, which the L2 code listens for, for example a BlockProposed event. These are all defined in `Structures.sol`.

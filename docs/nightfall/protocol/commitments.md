@@ -13,6 +13,26 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 
+
+## What are Commitments?
+
+A commitment is a cryptographic primitive that allows a user to commit to a chosen value 
+while keeping it hidden to others, with the ability to reveal the committed value later.
+
+Every time a user performs a transaction using Nightfall, the browser wallet computes a Zero 
+Knowledge Proof (ZKP) and creates (or nullifies) a commitment. 
+For instance, you create a commitment when you make a deposit and nullify a commitment when you 
+make a withdrawal.
+
+ZKP computation relies on [circuits](../protocol/circuits.md) that define the rules which a 
+transaction must follow to be correct. During Beta, there are a limited number of rules in place which require you to operate as follows: 
+
+- The Withdraw value must exactly match the amount in one of the commitments owned
+- [About transfers](#important-information-about-transfers)
+
+The key takeaway is that Nightfall handles commitments. Commitments are created during deposits and transfers, and are spent during transfers and withdrawals transactions. Even though the wallet shows the aggregated commitment value per asset, **commitments are not aggregated together**. When spending a commitment, its value of the commitment spent needs to match exactly an existing commitment, (`withdraw` and `single transfer`) or must be a linear combination of any two commitments owned (`double transfer`).
+
+
 Current ZKP transfer circuits used in Nightfall are restricted to 2 input - 2 output and 1 input - 1 output transfers, with all inputs and outputs having a value > 0.
 If a transactor's set of commitments contain primarily low value commitments (dust), they may find it hard to conduct future transfers.
 

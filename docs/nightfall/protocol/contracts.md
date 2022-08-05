@@ -35,7 +35,7 @@ Since Nightfall interacts with real ERC contracts, the following checks cannot b
 - During **Deposit**, user has balance or owns token to create commitment.
 
 ## Proposers
-Contract includes functionality for registering, de-registering, paying and rotating proposers, and proposing a new Layer 2 Block to the blockchain.
+Contract includes functionality for registering, unregistering, paying and rotating proposers, and proposing a new Layer 2 Block to the blockchain.
 First version of Nightfall only accepts a single Boot Proposer operated by Polygon. In the upcoming versions, this restriction will be lifted where multiple proposers will be allowed.
 
 ## Challenges 

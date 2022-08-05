@@ -16,16 +16,11 @@ image: https://matic.network/banners/matic-network-16x9.png
 The Polygon Nightfall wallet is a browser wallet that is able to interact with the
 Nightfall mainnet beta release.
 
-:::note Use the Nightfall wallet to make deposits, transfers, and withdrawals
+:::info Use the Nightfall wallet to make deposits, transfers, and withdrawals
 
-The following tokens are currently operative:
+### Restrictions
 
-- MATIC
-- WETH
-- DAI
-- USDC
-
-### Note the following deposit and withdrawal restrictions:
+While Nightfall achieves a mature state, the following restrictions are applied:
 
 
 | ERC20 token | Max Deposit | Max Withdraw |
@@ -45,37 +40,9 @@ browsers.
 
 **We highly recommend you to use Nightfall on Chrome**.
 
-Your wallet keys and transactions are stored in the browser (IndexedDb). 
-This data is currently not exported anywhere for security measures. As a result, you will not 
-have access to your wallet when using a different browser or a different machine unless you transfer 
-the IndexedDB contents, or recover your account.
-
-We may change this in future depending on the Beta phase feedback.
-
 :::
 
-## How to connect a Ledger Hardware Wallet to Nightfall
-There is a guide to connect your Ledger Hardware Wallet with Metamask in the official Metamask site [here](https://support.ledger.com/hc/en-us/articles/4404366864657-How-to-access-your-Ledger-Ethereum-ETH-account-via-Metamask?docs=true).
 
-Be sure to connect the Ethereum App in your wallet and enable "blind signing" in the Ethereum App settings.
-
-## What are Commitments?
-
-A commitment is a cryptographic primitive that allows a user to commit to a chosen value 
-while keeping it hidden to others, with the ability to reveal the committed value later.
-
-Every time a user performs a transaction using Nightfall, the browser wallet computes a Zero 
-Knowledge Proof (ZKP) and creates (or nullifies) a commitment. 
-For instance, you create a commitment when you make a deposit and nullify a commitment when you 
-make a withdrawal.
-
-ZKP computation relies on [circuits](../protocol/circuits.md) that define the rules which a 
-transaction must follow to be correct. During Beta, there are a limited number of rules in place which require you to operate as follows: 
-
-- The Withdraw value must exactly match the amount in one of the commitments owned
-- [About transfers](#important-information-about-transfers)
-
-The key takeaway is that Nightfall handles commitments. Commitments are created during deposits and transfers, and are spent during transfers and withdrawals transactions. Even though the wallet shows the aggregated commitment value per asset, **commitments are not aggregated together**. When spending a commitment, its value of the commitment spent needs to match exactly an existing commitment, (`withdraw` and `single transfer`) or must be a linear combination of any two commitments owned (`double transfer`).
 
 ## Getting Started
 
@@ -105,6 +72,17 @@ On your first visit your Nightfall wallet will have to be created. A pop-up shou
 
 ![](../imgs/tools-wallet/generate-mnemonic-create-wallet.png)
 
+:::caution Backup your commitments and mnemonics
+
+Your wallet keys and transactions are stored in the browser (IndexedDb). Same as the mnemonic you set up when you access Nightfall Wallet for the first time.
+
+Be sure to store this mnemonic somewhere safe. It is the only way to be able to produce proofs compatible with your funds on L2. Same happens with your commitments: be sure to store them safely by hitting `export commitments` whenever you use another browser or machine.
+
+:::
+
+**If you lose your commitments, your funds are lost forever**
+
+
 At this point you should be able to see both your Metamask and your Nightfall wallet addresses (top-right).
 
 **Allow a few more minutes to complete wallet setup before start making transactions**.
@@ -117,6 +95,13 @@ ZK circuits and network state required to perform transactions.
 Please, wait until wallet status changes to `Nightfall Synced`
 
 ![](../imgs/tools-wallet/wallet-state-synced.png)
+
+
+## How to connect a Ledger Hardware Wallet to Nightfall
+There is a guide to connect your Ledger Hardware Wallet with Metamask in the official Metamask site [here](https://support.ledger.com/hc/en-us/articles/4404366864657-How-to-access-your-Ledger-Ethereum-ETH-account-via-Metamask?docs=true).
+
+Be sure to connect the Ethereum App in your wallet and enable "blind signing" in the Ethereum App settings.
+
 
 ### Your wallet address
 Get your Nightfall wallet address from the Nightfall Assets page by clicking on `Receive`.
