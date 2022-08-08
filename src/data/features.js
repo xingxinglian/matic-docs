@@ -83,7 +83,7 @@ export const secondRow = [
     {
         title: "Hermez",
         status: "ZK Rollup",
-        linkUrl: "https://docs.hermez.io/",
+        linkUrl: "docs/hermez/zkEVM-Architectural-Overview",
         imageUrl: "img/hermez.svg",
         description: "A zk-rollup solution for scaling payments and token transfers."
     },
