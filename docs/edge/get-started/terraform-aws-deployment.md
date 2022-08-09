@@ -91,9 +91,8 @@ In a production environment `terraform taint` should be run one-by-one in order 
 ## Deployment procedure
 
 ### Pre deployment steps
-[//]: # (github repo will be changed, once AWS team merges the PR)
 * clone the official terraform scripts repository  
-`git clone https://github.com/MVPWorkshop/terraform-polygon-technology-edge -b aws-lambda`
+`git clone https://github.com/aws-ia/terraform-aws-polygon-technology-edge`
 * enter the cloned directory    `cd terraform-polygon-technology-edge`
 * provide a new certificate in [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
 * make sure that the provided certificate is in **Issued** state and take a note of certificate's **ARN**
