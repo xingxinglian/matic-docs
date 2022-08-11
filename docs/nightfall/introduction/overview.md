@@ -36,7 +36,7 @@ when using blockchain: the lack of privacy of transactions. Nightfall adds a lay
 Polygon Nightfall's main value proposition is to enable secure, private, low-cost transfers of
 data in a decentralized network.
 
-![](../imgs/transfer.png)
+![](../imgs/overview.png)
 
 ## Privacy
 
