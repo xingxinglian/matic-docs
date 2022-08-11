@@ -930,7 +930,7 @@ module.exports = {
       items: [
         "nightfall/tools/nightfall-wallet",
         "nightfall/tools/explorer",
-        "nightfall/tools/sdk"
+        "nightfall/tools/nightfall-sdk"
       ]
     },
     "nightfall/faq/faq",
