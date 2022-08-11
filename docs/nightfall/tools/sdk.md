@@ -1,5 +1,5 @@
 ---
-id: nightfall-sdk
+id: sdk
 title: SDK
 sidebar_label: SDK
 description: Nightfall SDK

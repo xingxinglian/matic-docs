@@ -928,7 +928,9 @@ module.exports = {
         type: "generated-index",
       },
       items: [
-        "nightfall/tools/nightfall-wallet"
+        "nightfall/tools/nightfall-wallet",
+        "nightfall/tools/explorer",
+        "nightfall/tools/sdk"
       ]
     },
     "nightfall/faq/faq",

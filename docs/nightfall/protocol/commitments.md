@@ -1,67 +1,68 @@
 ---
 id: commitments
-title: Commitment Selection
-sidebar_label: Commitment Selection
+title: Commitments and Nullifiers 
+sidebar_label: Commitment and Nullifiers
 description: "Single and double transfer."
 keywords:
   - docs
   - polygon
   - nightfall
   - commitment
-  - selection
-  - transfer
+  - nullifier 
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 
 
 ## What are Commitments?
-
 A commitment is a cryptographic primitive that allows a user to commit to a chosen value 
-while keeping it hidden to others, with the ability to reveal the committed value later.
+while keeping it hidden to others, with the ability to reveal the committed value later. 
+Confidentiality of value and recipient is attained in this manner.
 
 Every time a user performs a transaction using Nightfall, the browser wallet computes a Zero 
 Knowledge Proof (ZKP) and creates (or nullifies) a commitment. 
-For instance, you create a commitment when you make a deposit and nullify a commitment when you 
-make a withdrawal.
+For instance, you create a commitment when you make a deposit or a transfer and nullify a commitment when you 
+make a transfer or a withdrawal.
 
 ZKP computation relies on [circuits](../protocol/circuits.md) that define the rules which a 
-transaction must follow to be correct. During Beta, there are a limited number of rules in place which require you to operate as follows: 
+transaction must follow to be correct. 
 
-- The Withdraw value must exactly match the amount in one of the commitments owned
-- [About transfers](#important-information-about-transfers)
+The commitment is uses to hide the following properties:
+- **ERC address of the token**
+- **Token Id**
+- **Value**
+- **Owner**
 
-The key takeaway is that Nightfall handles commitments. Commitments are created during deposits and transfers, and are spent during transfers and withdrawals transactions. Even though the wallet shows the aggregated commitment value per asset, **commitments are not aggregated together**. When spending a commitment, its value of the commitment spent needs to match exactly an existing commitment, (`withdraw` and `single transfer`) or must be a linear combination of any two commitments owned (`double transfer`).
+Commitments are stored in a *Merkle Tree* structure. The root of this *Merkle Tree* is stored on-chain.
+
+The key takeaway is that Nightfall handles commitments. Commitments are created during deposits and transfers, and are spent during transfers and withdrawals transactions. Even though the wallet shows the aggregated commitment value per asset, **commitments are not aggregated together**. When spending a commitment, the value of the commitment spent is limited to the value of up to any two commitnents owned. 
 
 
-Current ZKP transfer circuits used in Nightfall are restricted to 2 input - 2 output and 1 input - 1 output transfers, with all inputs and outputs having a value > 0.
+Current ZKP transfer circuits used in Nightfall are restricted to 2 input - 2 output (transfer/withdraw commitment and change).
 If a transactor's set of commitments contain primarily low value commitments (dust), they may find it hard to conduct future transfers.
 
 Observe the following value sets 
 
-- Set A: [1, 1, 1, 1, 1, 1]
-- Set B: [2, 2, 2]
-- Set C: [2, 4]
+- **Set A**: [1, 1, 1, 1, 1, 1]
+- **Set B**: [2, 2, 2]
+- **Set C**: [2, 4]
 
-While all three sets have equivalent total sums, the maximum value transfer that can be transacted by sets A, B, and C are 1, 3, and 5 respectively. This is one of the reasons why large commitments values are preferred. The commitment selection strategy used mitigates this risk by prioritising the use of small value commitments while also minimising the creation of dust commitments.
+While all three sets have equivalent total sums, the maximum value transfer that can be transacted by sets *A*, *B*, and *C* are 2, 4, and 6 respectively. This is one of the reasons why large commitments values are preferred. The commitment selection strategy used mitigates this risk by prioritising the use of small value commitments while also minimising the creation of dust commitments.
 
-## Single Transfer
-In the base case, whereby a transactor's set contains a commitment of exact value to the target value, it will be used for the transfer.
+![](../imgs/commitment.png)
 
-## Double Transfer
-If a single transfer is not possible, a double transfer will be attempted.
+## What are Nullifiers?
+A **Nullifier** is the result of combination of a commitment and the nullifier key. Once the nullifier is broadcasted on-chain, the commitment is considered spent.
+Nullifiers are stored on-chain as part of the call data during block proposal.
 
-1. Sort all commitments by value.
-2. Split commitments into two sets based on whether their values are less than (`LT`) or greater than (`GT`) the target value. 
-3. If the sum of the two largest values in set `LT` is LESS than the target value:
-	- We cannot arrive at the target value with two elements in this set.
-	- Our two selected commitments will be the smallest commitment in `LT` and the smallest commitment in `GT`.
-	- It is guaranteed that the output (change) commitments will be larger than the input commitment from `LT`.
-4. If the sum of the two largest values in set `LT` is GREATER than the target value:
-	- We use a standard inward search whereby we begin with two pointers, `lhs` and `rhs` at the start and end of the `LT`.
-	- We also track the change difference, this is the change in size of the smallest commitment in this set resulting from this transaction's output.
-	- If the sum of the commitments at the pointers is greater than the target value, we move pointer `rhs` to the left.
-	- Otherwise, we move pointer `lhs` to the right.
-	- The selected commitments are the pair that minimise the change difference. The best case in this scenario is a change difference of -1.
+![](../imgs/nullifier.png)
 
-The following picture depicts the commitment selection mechanism.
-![](../imgs/commitment-selection-info.png)
+
+## Putting it all together
+
+Transferring a commitment involves two steps:
+- Nullification of existing commitment 
+- New commimtment creation
+
+![](../imgs/transfer.png)
+
+
