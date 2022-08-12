@@ -882,6 +882,7 @@ module.exports = {
         type: "generated-index",
       },
       items: [
+        "nightfall/deployments/versions",
         "nightfall/deployments/mainnet",
         "nightfall/deployments/testnet",
       ],
@@ -902,9 +903,9 @@ module.exports = {
           items: [
             "nightfall/protocol/actors",
             "nightfall/protocol/contracts",
-            "nightfall/protocol/circuits",
             "nightfall/protocol/commitments",
             "nightfall/protocol/secrets",
+            "nightfall/protocol/circuits",
             "nightfall/protocol/protocol"
           ]
         },

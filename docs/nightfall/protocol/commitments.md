@@ -34,10 +34,12 @@ The commitment is uses to hide the following properties:
 
 Commitments are stored in a *Merkle Tree* structure. The root of this *Merkle Tree* is stored on-chain.
 
-The key takeaway is that Nightfall handles commitments. Commitments are created during deposits and transfers, and are spent during transfers and withdrawals transactions. Even though the wallet shows the aggregated commitment value per asset, **commitments are not aggregated together**. When spending a commitment, the value of the commitment spent is limited to the value of up to any two commitnents owned. 
+![](../imgs/commitment.png)
 
+### UTXO
+Commitments are created during deposits and transfers, and are spent during transfers and withdrawals transactions. **Commitments are not aggregated together**. When spending a commitment, the value of the commitment spent is limited to the value of up to any two commitnents owned. 
 
-Current ZKP transfer circuits used in Nightfall are restricted to 2 input - 2 output (transfer/withdraw commitment and change).
+Current ZKP transfer and withdraw circuits used in Nightfall are restricted to 2 input - 2 output (transfer/withdraw commitment and change) excluding payments.
 If a transactor's set of commitments contain primarily low value commitments (dust), they may find it hard to conduct future transfers.
 
 Observe the following value sets 
@@ -48,7 +50,6 @@ Observe the following value sets
 
 While all three sets have equivalent total sums, the maximum value transfer that can be transacted by sets *A*, *B*, and *C* are 2, 4, and 6 respectively. This is one of the reasons why large commitments values are preferred. The commitment selection strategy used mitigates this risk by prioritising the use of small value commitments while also minimising the creation of dust commitments.
 
-![](../imgs/commitment.png)
 
 ## What are Nullifiers?
 A **Nullifier** is the result of combination of a commitment and the nullifier key. Once the nullifier is broadcasted on-chain, the commitment is considered spent.
@@ -56,13 +57,5 @@ Nullifiers are stored on-chain as part of the call data during block proposal.
 
 ![](../imgs/nullifier.png)
 
-
-## Putting it all together
-
-Transferring a commitment involves two steps:
-- Nullification of existing commitment 
-- New commimtment creation
-
-![](../imgs/transfer.png)
 
 

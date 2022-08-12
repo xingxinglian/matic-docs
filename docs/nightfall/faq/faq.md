@@ -39,22 +39,13 @@ Additionally, there is an upper limit on the block generation period so that at 
 ## Who can I transact with?
 To transfer assets within Polygon Nightfall one only needs the `Destination Wallet Address`. Read the wallet tutorial to understand [how to share your Wallet Address](../tools/nightfall-wallet.md#your-wallet-address) to receive funds.
 
-## What are some privacy recommendations?
+## Where are commitments backed up?
 
-Some privacy guidelines include:
-- Don't deposit a very unique coin value (e.g. 3.1415 USDC) and then withdraw the same amount. People will be able to guess who you probably sent it to. Likewise don't deposit and withdraw exceptionally large values.
-- Withdraw different amounts from what you deposit. This makes it harder to guess who you paid.
-- Wait a while. You should ensure that there are at least a few other transactions between the deposit and withdraw. If there are no other transactions during the time you make a deposit and withdraw, people may be able to guess that they are connected.
-- Don't make regular or predictable transactions. For example, if a deposit from a particular Ethereum address is always made at 12:01 on the first of the month and a withdraw is always made to a particular Ethereum address at 12:05 on the second of the month people may guess that they are related; you expose yourself to statistical analysis even if the amounts are uncorrelated.
-
-When used correctly, the Polygon Nightfall wallet can provide fully private transfers of ERC20 tokens.
-
-**Privacy of commitments**
 Zero Knowledge proofs are computed in the browser, so that your secret keys remain with you, and the wallet keeps track of any commitments that you own, in its IndexedDb. Anyone with access to this data can find out which commitments you own, although they can't steal them without your keys. Keys are only decrypted when you enter the mnemonic. Thus you should only use the wallet on a machine which you trust.
 
-For now, this data is not exported anywhere. Thus, if you use a browser on a different machine, you will not have access to your commitments unless you transfer the IndexedDB contents. We may change this in future, depending on Beta feedback. It's a security versus convenience debate.
+For now, this data is not exported anywhere. Thus, if you use a browser on a different machine, you will not have access to your commitments unless you transfer the IndexedDB contents. We provide a mechanism to export and import commitments though the wallet.
 
-**On-chain privacy**
+## Privacy of transactions
 It's important to understand that Deposit and Withdraw transactions are not private. That is because they interact with Layer 1 and Layer 1 is not private. This means that everyone knows if you create a Layer 2 commitment and how much it contains. Likewise, if you return a token back to Layer 1 by destroying a Layer 2 commitment, everyone knows who received it and how much.
 
 Privacy comes entirely from transfers within Layer 2. From the point of view of the Ethereum blockchain, these are fully private. The only data leaked is your IP address when you send a transfer transaction to a Block Proposer. For early Beta, Polygon runs the only Proposers.
@@ -67,7 +58,7 @@ Funds can be withdrawn with Polygon Nightfall wallet. Withdrawals have a **one w
 There are two types of transactions that bear different costs:
 
 - On-chain transactions: These transactions are sent to the smart contract and require gas fees on Ethereum to be mined. Any proposer can take this transaction and put it in a block. Currently, `deposit` and `finalize withdrawal` are on-chain transactions.
-- Off-chain transactions: These transactions are sent directly to the proposer. Currently, all `transfer` and `withdrawals` are configured as off-chain transactions. These transactions cost `1 MATIC` paid in the PoS network.
+- Off-chain transactions: These transactions are sent directly to the proposer. Currently, all `transfer` and `withdrawals` are configured as off-chain transactions. 
 
 ## Which tokens can I use on Nightfall Network?
 The following tokens are operative on Nightfall:
@@ -78,7 +69,7 @@ The following tokens are operative on Nightfall:
 - USDC
 
 ## Do I need MATIC tokens to use Nightfall?
-Yes. You need MATIC on PoS to be able to send off-chain transactions to the proposer.
+Yes. You will need to deposit some MATIC tokens on Nightfall to be able to pay for `transfers` and `withdrawals`.
 
 ## Where can I submit a bug report or contact Nightfall for additional help?
 Best way is to join our [Polygon Nightfall discord server](https://discord.com/invite/pZkC3JV2bR) and submit your question.
