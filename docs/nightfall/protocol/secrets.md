@@ -9,14 +9,15 @@ keywords:
   - nightfall
   - secret
   - encryption
+  - key
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 
 ## Overview
 
 To ensure a recipient receives the secret information required to spend their commitments, the sender
-encrypts the secrets (salt, value, tokenId, ercAddress) of the commitment sent to the recipient and
-proves using ZKP that they encrypted this correctly with the recipient's public key. The KEM-DEM hybrid encryption paradigm is used.
+encrypts the secrets (*salt*, *value*, *tokenId*, *ercAddress*) of the commitment sent to the recipient and
+proves using ZKP that they encrypted this correctly with the recipient's public key. The [**KEM-DEM**](https://eprint.iacr.org/2006/265.pdf) hybrid encryption paradigm is used.
 
 ## KEM-DEM Hybrid Encryption
 
@@ -29,7 +30,7 @@ prime and `G` is the generator.
 Alice generates a random ephemeral asymmetric key-pair $(x_e, Q_e)$:  
 $$ x_e \; \leftarrow\; \{0, 1\}^{256} \qquad Q_e \coloneqq x_eG $$
 
-These keys are only used once, and are unique to this transaction, giving us perfect forward secerecy.
+These keys are only used once, and are unique to this transaction, giving us perfect forward secrecy.
 
 ### Encryption
 
@@ -58,6 +59,7 @@ The sender then provides the recipient with $(Q_e, \text{ciphertexts})$. These a
 
 ### Decryption
 In order to decrypt, the recipient performs a slightly modified version of the KEM-DEM steps.
+
 ### Key Encapsulation Method (Decryption)
 Given $Q_e$, the recipient is able to calculate the encryption key locally by performing the following steps.
 
@@ -99,3 +101,6 @@ can calculate the `zkpPrivateKey` and `nullifierKey`. The `zkpPrivateKey` can be
 whilst the `nullifierKey` can be used to spend the commitment. Hence `rootKey` and `mnemonic` must be stored very securely.
 It is also recommended to store `zkpPrivateKey` and `nullifierKey` separately to avoid theft of commitments in case one of these
 is compromised.
+
+The figure below is a representation of the steps followed to derive the different keys in Nightfall
+![](../imgs/key-derivation.png)

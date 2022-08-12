@@ -2,7 +2,7 @@
 id: nightfall-sdk
 title: SDK
 sidebar_label: SDK
-description: Nightfall SDK
+description: "Nightfall SDK"
 keywords:
   - docs
   - polygon

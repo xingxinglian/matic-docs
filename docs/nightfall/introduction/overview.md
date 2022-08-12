@@ -36,7 +36,7 @@ when using blockchain: the lack of privacy of transactions. Nightfall adds a lay
 Polygon Nightfall's main value proposition is to enable secure, private, low-cost transfers of
 data in a decentralized network.
 
-![](../imgs/transfer.png)
+![](../imgs/overview.png)
 
 ## Privacy
 
@@ -55,8 +55,8 @@ transaction. More details about the privacy component of Nightfall are available
 
 Polygon Nightfall is a Layer 2 construction because it leverages Ethereum by borrowing its security as a robust
 public blockchain. Nightfall relies on certain assumptions that guarantee asset recovery. These assumptions are
-based on several design and architectural decisions revolving around ZK-SNARKS. These ZK-SNARKs use
-certain cryptographic primitives, such as hashes and signatures, that make additional security assumptions.
+based on several design and architectural decisions revolving around ZK-SNARKS, which use
+certain cryptographic primitives, such as hashes and signatures.
 Finally, Nightfall embeds operating rules in different smart contracts to guarantee that operators don't block
 user transactions and that users can withdraw their assets at all times.
 
@@ -64,7 +64,7 @@ As a summary, Nightfall makes the following security assumptions:
 
 1. Security assumptions of Ethereum.
 2. Groth16 assumptions (knowledge of exponent assumption).
-3. Certain cryptographic assumptions from primitives such as hashes and signatures.
+3. Certain cryptographic assumptions from primitives such as hashes (Poseidon) and signatures.
 4. Software security assumptions that rely on correct design and implementation.
 
 ## Efficiency
@@ -72,8 +72,7 @@ As a summary, Nightfall makes the following security assumptions:
 Block proposers collect transactions from various users and batch them together into an L2 Block.
 Typical L2 block sizes contain about 32 transactions.
 
-The expected gas costs for a deposit, single transfer, double transfer, and withdrawal are 8200, 11400,
-12200, 8500 respectively. This cost is due to store 634Bytes of calldata per transaction, plus some
+The expected gas costs for a deposit, transfer, and withdrawal are 9000, 1200 and 9500. This cost is due to store 574Bytes of calldata per transaction, plus some
 fixed calldata and computation to process an L2 block. Costs will be up to 80% lower after
 [EIP 4488](https://eips.ethereum.org/EIPS/eip-4488).
 
@@ -91,6 +90,12 @@ transactions and L2 blocks produce timely and correctly. A proof-of-stake (PoS) 
 used to select the next [Proposer](../protocol/proposers.md) of the network. On the other hand, Challengers monitor
 the correct operation of the network by raising challenges when an incorrect block is detected and by retaining the
 stake advanced by the Proposer.
+
+
+## Future Proof
+Thanks to the flexibility provided by the Optimistic rollup implementation of Nightfall, it is possible to include new transactions
+in the future without compromising existing transactions by just defining and registering a new circuit type that implemented the 
+transaction in ZK.
 
 ## References
 

@@ -1,5 +1,5 @@
 ---
-id: block-explorer
+id: explorer
 title: Block Explorer
 sidebar_label: Block Explorer
 description: Block Explorer
