@@ -1,7 +1,7 @@
 ---
 id: how-state-sync-works
 title: How does State Sync work?
-description: Build your next blockchain app on Polygon.
+description: "Sending the state from the Ethereum chain to the Bor chain."
 keywords:
   - docs
   - matic

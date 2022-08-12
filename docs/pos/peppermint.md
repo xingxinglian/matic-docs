@@ -1,13 +1,13 @@
 ---
 id: peppermint
 title: Peppermint 
-description: Peppermint is modified Tendermint. It is changed to use to make it compatible with Ethereum addresses and verifiable on Ethereum chain.
+description: "Peppermint is a modified Ethereum-compatible Tendermint."
 keywords:
   - docs
   - matic
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
-Peppermint is modified Tendermint. It is changed to use to make it compatible with Ethereum addresses and verifiable on Ethereum chain.
+Peppermint is a modified Tendermint. It is changed to make it compatible with Ethereum addresses and verifiable on Ethereum chain.
 
 **Overview**
 

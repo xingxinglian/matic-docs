@@ -1,7 +1,7 @@
 ---
 id: stdtx
 title: StdTx
-description: Build your next blockchain app on Polygon.
+description: "A standard way to wrap a Msg with Fee and Signatures."
 keywords:
   - docs
   - matic

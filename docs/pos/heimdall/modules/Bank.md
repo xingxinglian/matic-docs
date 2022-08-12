@@ -1,7 +1,7 @@
 ---
 id: bank
 title: Bank
-description: Bank module handles account balance transfers for Heimdall. This module is from `bank` module from cosmos-sdk.
+description: "Module handling account balance transfers for Heimdall."
 keywords:
   - docs
   - matic

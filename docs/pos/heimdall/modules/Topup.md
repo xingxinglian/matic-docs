@@ -1,7 +1,7 @@
 ---
 id: topup
 title: Topup
-description: Heimdall Topup is an amount which will be used to pay fees on Heimdall chain.
+description: "An amount which will be used to pay fees on Heimdall chain."
 keywords:
   - docs
   - matic

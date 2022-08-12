@@ -1,7 +1,7 @@
 ---
 id: bor
 title: Bor
-description: Bor module handles span management on Heimdall. Given Bor chain's current block number `n`, current span `span`, if `span.StartBlock <= n < span.EndBlock` , new span is proposed on Heimdall by any validator.
+description: "Module that handles span management on Heimdall." 
 keywords:
   - docs
   - matic

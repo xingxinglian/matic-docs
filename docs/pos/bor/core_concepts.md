@@ -1,7 +1,7 @@
 ---
 id: core_concepts
 title: Core Concepts
-description: Bor is state chain in Polygon architecture. It is a fork of Geth [https://github.com/ethereum/go-ethereum](https://github.com/ethereum/go-ethereum) with new consensus called Bor.
+description: "Bor is state chain in Polygon architecture."
 keywords:
   - docs
   - matic

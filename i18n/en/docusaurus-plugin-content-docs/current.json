@@ -266,5 +266,77 @@
   "sidebar.faq.category.Wallet FAQs": {
     "message": "Wallet FAQs",
     "description": "The label for category Wallet FAQs in sidebar faq"
+  },
+  "sidebar.develop.category.Using Matic.js": {
+    "message": "Using Matic.js",
+    "description": "The label for category Using Matic.js in sidebar develop"
+  },
+  "sidebar.develop.category.Miscellaneous": {
+    "message": "Miscellaneous",
+    "description": "The label for category Miscellaneous in sidebar develop"
+  },
+  "sidebar.contribute.category.Become a Contributor": {
+    "message": "Become a Contributor",
+    "description": "The label for category Become a Contributor in sidebar contribute"
+  },
+  "sidebar.contribute.category.Style Guide": {
+    "message": "Style Guide",
+    "description": "The label for category Style Guide in sidebar contribute"
+  },
+  "sidebar.contribute.category.Translations": {
+    "message": "Translations",
+    "description": "The label for category Translations in sidebar contribute"
+  },
+  "sidebar.edge.category.Get started": {
+    "message": "Get started",
+    "description": "The label for category Get started in sidebar edge"
+  },
+  "sidebar.edge.category.Configuration": {
+    "message": "Configuration",
+    "description": "The label for category Configuration in sidebar edge"
+  },
+  "sidebar.edge.category.Secret Managers": {
+    "message": "Secret Managers",
+    "description": "The label for category Secret Managers in sidebar edge"
+  },
+  "sidebar.edge.category.Working with a node": {
+    "message": "Working with a node",
+    "description": "The label for category Working with a node in sidebar edge"
+  },
+  "sidebar.edge.category.Consensus": {
+    "message": "Consensus",
+    "description": "The label for category Consensus in sidebar edge"
+  },
+  "sidebar.edge.category.Additional features": {
+    "message": "Additional features",
+    "description": "The label for category Additional features in sidebar edge"
+  },
+  "sidebar.edge.category.Chainbridge": {
+    "message": "Chainbridge",
+    "description": "The label for category Chainbridge in sidebar edge"
+  },
+  "sidebar.edge.category.Architecture": {
+    "message": "Architecture",
+    "description": "The label for category Architecture in sidebar edge"
+  },
+  "sidebar.edge.category.Modules": {
+    "message": "Modules",
+    "description": "The label for category Modules in sidebar edge"
+  },
+  "sidebar.edge.category.Concepts": {
+    "message": "Concepts",
+    "description": "The label for category Concepts in sidebar edge"
+  },
+  "sidebar.edge.category.Community": {
+    "message": "Community",
+    "description": "The label for category Community in sidebar edge"
+  },
+  "sidebar.edge.category.Performance Reports": {
+    "message": "Performance Reports",
+    "description": "The label for category Performance Reports in sidebar edge"
+  },
+  "sidebar.edge.category.Test History": {
+    "message": "Test History",
+    "description": "The label for category Test History in sidebar edge"
   }
 }

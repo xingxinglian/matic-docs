@@ -1,7 +1,7 @@
 ---
 id: staking
 title: Staking
-description: Staking module manages validator related transactions and state for Heimdall. Note that a validator stakes their tokens on the Ethereum chain and becomes a validator. Respective validators send the transactions on Heimdall using necessary parameters to acknowledge the Ethereum stake change.
+description: "Module that manages validator-related transactions and state."
 keywords:
   - docs
   - matic

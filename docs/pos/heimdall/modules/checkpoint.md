@@ -1,7 +1,7 @@
 ---
 id: checkpoint
 title: Checkpoint
-description: checkpoint module manages checkpoint related functionalities for Heimdall. It needs Bor chain when a new checkpoint is proposed on Heimdall to verify checkpoint root hash.
+description: "Module that manages checkpoint-related functionalities."
 keywords:
   - docs
   - matic

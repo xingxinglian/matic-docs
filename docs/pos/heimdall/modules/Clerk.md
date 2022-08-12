@@ -1,7 +1,7 @@
 ---
 id: clerk
 title: Clerk
-description: Clerk manages generic state-sync from Ethereum chain to Bor chain. Heimdall agrees on state sync, which is initiated on the Ethereum chain using this module.
+description: "Module that manages generic state-sync from Ethereum to Bor. "
 keywords:
   - docs
   - matic

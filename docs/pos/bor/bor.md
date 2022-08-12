@@ -1,7 +1,7 @@
 ---
 id: bor
 title: Bor architecture
-description: Build your next blockchain app on Polygon.
+description: "The Bor role in the Polygon architecture."
 keywords:
   - docs
   - matic

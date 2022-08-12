@@ -1,7 +1,7 @@
 ---
 id: overview
 title: Overview
-description: Heimdall is the heart of the Matic network. It manages validators, block producer span, the state-sync mechanism and other essentials aspects of the system.
+description: "Heimdall is the heart of the Matic network."
 keywords:
   - docs
   - matic

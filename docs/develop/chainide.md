@@ -18,9 +18,15 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 ## Introduction
 
-[ChainIDE](https://chainide.com/) is a chain agnostic, cloud-based IDE for creating decentralized applications. It enhances development cycle through pre-configured plugins that save users' time and effort. This is a beginner guide on creating and deploying a simple ERC-721 smart contract on the Polygon Mumbai Testnet. If you have any questions, feel free to ask them in the [ChainIDE Discord](https://discord.gg/QpGq4hjWrh).
+[ChainIDE](https://chainide.com/) is a chain agnostic, cloud-based IDE for creating decentralized applications. It enhances development cycle through pre-configured plugins that save users' time and effort. This is a beginner guide on creating and deploying a simple ERC-721 smart contract on the Polygon Mumbai Testnet. 
 
-## Pre-requisites
+:::tip
+
+If you have any questions, feel free to ask the ChainIDE team in [<ins>their Discord</ins>](https://discord.gg/QpGq4hjWrh).
+
+:::
+
+## Prerequisites
 
 1. ChainIDE
 2. MetaMask
@@ -30,7 +36,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 The following are general steps for deploying an ERC-721 smart contract:
 
-1.  Setting up a wallet
+1.  Set up a wallet
 2.  Write down an ERC-721 smart contract
 3.  Compile an ERC-721 Smart Contract
 4.  Deploy an ERC-721 Smart Contract
@@ -62,21 +68,21 @@ Once Mumbai has been added to MetaMask, navigate to the [Polygon Faucet](https:/
 
 You need to write down all the required functions that you want to implement in your ERC-721 smart contract. A general ERC-721 smart contract has the following functions:
 
--   `balanceOf()`: return by_ The number of NFTs held by the owner
+-   `balanceOf()`: returns the number of NFTs held by the owner.
     
--   `ownerOf()`: returns the address of the token holder
+-   `ownerOf()`: returns the address of the token holder.
     
--   `approve():`grant address_ To has_ Token ID control. Approval event needs to be triggered after the method is successful
+-   `approve()`: approves the permission to transfer tokens on the owner’s behalf. Approval event needs to be triggered after the method is successful. 
     
--   `setApprovalForAll()`: Grant address_ The operator has the control of all NFTs, and the approvalforall event needs to be triggered after success
+-   `setApprovalForAll()`: Sets the approval of a given operator, and the approvalforall event needs to be triggered after success.
     
--   `getApproved()` : Get the approved address for a single NFT
+-   `getApproved()` : Get the approved address for a single NFT.
     
--   `isApprovedForAll()`: Query if an address is an authorized operator for another address
+-   `isApprovedForAll()`: Query if an address is an authorized operator for another address.
     
--   `safeTransferFrom()`: To transfer the ownership of an NFT, a successful transfer operation must initiate a transfer event
+-   `safeTransferFrom()`: To transfer the ownership of an NFT, a successful transfer operation must initiate a transfer event.
     
--   `transferFrom()`: Used to transfer NFTs. After the method succeeds, it needs to trigger the transfer event. The caller confirms himself_ To address can receive NFT normally, otherwise, this NFT will be lost. When this function is implemented, it needs to check whether it meets the judgment conditions
+-   `transferFrom()`: Used to transfer NFTs. After the method succeeds, it needs to trigger the transfer event. The caller confirms he can receive NFT normally, otherwise, this NFT will be lost. When this function is implemented, it needs to check whether it meets the judgment conditions.
 
 The ChainIDE team has prepared a complete ERC-721 template contract that includes all the required functions; you may use this built-in template and add/delete functions according to your requirements.
 
@@ -96,9 +102,9 @@ After creating the project, click on the "unconnected button" in the upper right
 
 ## Compile an ERC-721 Smart Contract
 
-After you have completed your smart contract, it is time to compile it. To compile, navigate to "compile the module", choose an appropriate compiler according to your source code, and press the "compile" button. An ABI and bytecode for the source code generate upon successful compilation. If there are some errors in your source code, they will display under the output panel in the "Logger module". You may need to carefully read the error, resolve it accordingly and compile the contract again.  
+After you have completed your smart contract, it is time to compile it. To compile, navigate to "compile the module", choose an appropriate compiler according to your source code, and press the "compile" button. An ABI and bytecode for the source code are generated upon successful compilation. If there are some errors in your source code, they will be displayed under the output panel in the "Logger module". You may need to carefully read the error, resolve it accordingly and compile the contract again.  
 
-::: note
+:::note
 
 Note down the compiler version and the license for your source code as it would be needed when you verify your smart contract on the Polygon Mumbai Testnet.
 
@@ -108,11 +114,13 @@ Note down the compiler version and the license for your source code as it would 
 
 ## Deploy an ERC-721 Smart Contract
 
-After successful compilation, it's time to deploy your compiled ERC-721 smart contract to the Polygon Mumbai test network. For that, you need to have a MetaMask installed, the Polygon Mumbai test network added to your wallet, and some testnet tokens to pay for the transaction fee.
+After successful compilation, it's time to deploy your compiled ERC-721 smart contract to the Polygon Mumbai test network. For that, you need to have MetaMask installed, the Polygon Mumbai test network added to your wallet, and some testnet tokens to pay for the transaction fee.
 
 Navigate to the "Deploy & Interaction" module and choose among the compiled smart contract. Select the smart contract you want to deploy and click the "deploy" button. For this tutorial, the `GameItem` smart contract will be deployed.
 
 <img src="https://chainide-doc.s3.amazonaws.com/ERC+721+Deployment+on++Mumbai/image+(2).png" width="100%" height="100%" />
+
+### Check functions from the deployed contract
 
 After successful deployment, an output message should state that your smart contract was deployed successfully. You can now verify the deployed contract. All the functions in the deployed smart contract can be seen in the "INTERACT" panel.
 
@@ -124,7 +132,7 @@ To verify a smart contract that imports other smart contracts, we need to create
 
 <img src="https://chainide-doc.s3.amazonaws.com/ERC+721+Deployment+on++Mumbai/image+(7).png" width="100%" height="100%" />
 
-Once the Flatterner plug-in is activated, you'll be able to access it as a separate module as shown in the figure below. Choose the compiled file, and click on the flatten button to create a flattened file, once the flattened file is created, it will be automatically copied to the clipboard, you may paste it to a file and save it for later usage.
+Once the ner plug-in is activated, you'll be able to access it as a separate module as shown in the figure below. Choose the compiled file, and click on the flatten button to create a flattened file, once the flattened file is created, it will be automatically copied to the clipboard, you may paste it to a file and save it for later usage.
 
 <img src="https://chainide-doc.s3.amazonaws.com/ERC+721+Deployment+on++Mumbai/image+(8).png" width="100%" height="100%" />
 
@@ -179,4 +187,4 @@ After successful minting, you can check the minted NFT on the OpenSea NFT market
 
 <img src="https://chainide-doc.s3.amazonaws.com/ERC+721+Deployment+on++Mumbai/image+(6).png" width="100%" height="100%" />
 
-Congratulations, you have successfully minted an NFT on Polygon using ChainIDE.
+**Congratulations, you have successfully minted an NFT on Polygon using ChainIDE.**

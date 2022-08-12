@@ -1,7 +1,7 @@
 ---
 id: consensus
 title: Bor Consensus
-description: Bor consensus is inspired by Clique consensus [https://eips.ethereum.org/EIPS/eip-225](https://eips.ethereum.org/EIPS/eip-225) Clique works with multiple pre-defined producers. All producers vote on new producers using Clique APIs. They take a turn creating blocks.
+description: "Bor mechanism for fetching new producers."
 keywords:
   - docs
   - matic

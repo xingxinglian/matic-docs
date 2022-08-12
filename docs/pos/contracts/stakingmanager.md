@@ -1,7 +1,7 @@
 ---
 id: stakingmanager
 title: Staking Manager
-description: For the Polygon's Proof of Security based consensus, all the 2/3+1 proof verification and handling of staking, rewards are executed on the Ethereum smart contract. The whole design follows this philosophy of doing less on the Mainnet contract.
+description: "The main contract for handling validator-related activities."
 keywords:
   - docs
   - matic

@@ -1,7 +1,7 @@
 ---
 id: chainmanager
 title: Chain Manager
-description: This module provides all necessary dependencies like `contract-addresses`, `bor_chain_id,` and `tx_confirmation_time`. Other parameters can be added to this later on.
+description: "Module that provides all necessary dependencies."
 keywords:
   - docs
   - matic

@@ -527,26 +527,6 @@ Sets block production time in seconds. Default: `2`
 
 ---
 
-<h4><i>ibft-base-timeout</i></h4>
-<Tabs>
-  <TabItem value="syntax" label="Syntax" default>
-
-    server [--ibft-base-timeout IBFT_BASE_TIMEOUT]
-
-  </TabItem>
-  <TabItem value="example" label="Example">
-
-    server --ibft-base-timeout 10
-
-  </TabItem>
-</Tabs>
-
-Sets the base value of timeout on IBFT consensus.  
-IBFT consensus timeout is calculated by `BaseTimeout + 2^(round)`, or `BaseTimeout * 30` where round exceeds 8.  
-It needs to be larger than block time and `BlockTime * 5` is set if it's not specified.
-
----
-
 <h4><i>access-control-allow-origins</i></h4>
 <Tabs>
   <TabItem value="syntax" label="Syntax" default>
@@ -937,6 +917,7 @@ Address of the gRPC API. Default: `127.0.0.1:9632`.
 | ibft propose                | Proposes a new candidate to be added/removed from the validator set        |
 | ibft status                | Returns the overall status of the IBFT client   |
 | ibft switch                | Add fork configurations into genesis.json file to switch IBFT type |
+| ibft quorum                | Specifies the block number after which the optimal quorum size method will be used for reaching consensus |
 
 
 <h3>ibft snapshot flags</h3>
@@ -1089,7 +1070,7 @@ Address of the gRPC API. Default: `127.0.0.1:9632`.
   </TabItem>
 </Tabs>
 
-Specifies the genesis file to update. Default: `test`.
+Specifies the genesis file to update. Default: `./genesis.json`.
 
 ---
 
@@ -1178,7 +1159,7 @@ This number cannot exceed the value of MAX_SAFE_INTEGER (2^53 - 2).
   </TabItem>
   <TabItem value="example" label="Example">
 
-    bft switch --min-validator-count 4
+    ibft switch --min-validator-count 4
 
   </TabItem>
 </Tabs>
@@ -1188,6 +1169,46 @@ This number cannot exceed the value of max-validator-count.
 Defaults to 1.
 
 Specifies the beginning height of the fork.
+
+---
+
+<h3>ibft quorum flags</h3>
+
+<h4><i>from</i></h4>
+
+<Tabs>
+  <TabItem value="syntax" label="Syntax" default>
+
+    ibft quorum [--from your_quorum_switch_block_num]
+
+  </TabItem>
+  <TabItem value="example" label="Example">
+
+    ibft quorum --from 350
+
+  </TabItem>
+</Tabs>
+
+The height to switch the quorum calculation to QuorumOptimal, which uses the formula `(2/3 * N)`, `N` being the number of validator nodes. Please note that this is for backwards compatibility, ie. only for chains that used a Quorum legacy calculation up to a certain block height.
+
+---
+
+<h4><i>chain</i></h4>
+
+<Tabs>
+  <TabItem value="syntax" label="Syntax" default>
+
+    ibft quorum [--chain GENESIS_FILE]
+
+  </TabItem>
+  <TabItem value="example" label="Example">
+
+    ibft quorum --chain genesis.json
+
+  </TabItem>
+</Tabs>
+
+Specifies the genesis file to update. Default: `./genesis.json`.
 
 ### Transaction Pool Commands
 

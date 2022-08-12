@@ -67,6 +67,7 @@ module.exports = {
         "develop/network-details/technical-requirements",
         "develop/network-details/full-node-deployment",
         "develop/network-details/full-node-binaries",
+        "develop/network-details/full-node-docker",
         "develop/network-details/snapshot-instructions-heimdall-bor",
         "develop/network-details/network-rpc-endpoints",
       ],
@@ -985,7 +986,7 @@ module.exports = {
           items: [
               "edge/configuration/sample-config",
               "edge/configuration/manage-private-keys",
-              "edge/configuration/enable-metrics",
+              "edge/configuration/prometheus-metrics",
               {
                   type: "category",
                   label: "Secret Managers",
@@ -1000,6 +1001,7 @@ module.exports = {
               }
           ]
       },
+      "edge/validator-hosting",
       {
           type: "category",
           label: "Working with a node",
@@ -1085,16 +1087,6 @@ module.exports = {
       },
       {
           type: "category",
-          label: "Concepts",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-              "edge/concepts/ethereum-state"
-          ]
-      },
-      {
-          type: "category",
           label: "Community",
           link: {
             type: "generated-index",
@@ -1127,6 +1119,19 @@ module.exports = {
                   ]
               }
           ]
-      }
+      },
+      {
+        type: "category",
+        label: "FAQ",
+        link: {
+          type: "generated-index",
+        },
+        items: [
+            "edge/faq/validators",
+            "edge/faq/gas",
+            "edge/faq/contracts",
+            "edge/faq/tokens",
+        ]
+    }
   ]
 };

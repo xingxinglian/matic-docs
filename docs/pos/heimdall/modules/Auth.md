@@ -1,7 +1,7 @@
 ---
 id: auth
 title: Auth
-description: The auth module is responsible for specifying the base transaction and account types for an application. It contains the ante handler, where all basic transaction validity checks (signatures, nonces, auxiliary fields) are performed, and exposes the account keeper, which allows other modules to read, write, and modify accounts.
+description: "Module for specifying base transaction and account types."
 keywords:
   - docs
   - matic

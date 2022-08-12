@@ -1,7 +1,7 @@
 ---
 id: important-contracts
 title: Important contracts
-description: Build your next blockchain app on Matic.
+description: "State Syncer, Deposit manager, Childchain and ChildERC20/721."
 keywords:
   - docs
   - matic

@@ -15,7 +15,7 @@ Validators on the [Heimdall](../../glossary#heimdall) layer pick up the [StateSy
 
 The **receiver contract** inherits [IStateReceiver](https://github.com/maticnetwork/genesis-contracts/blob/master/contracts/IStateReceiver.sol), and custom logic sits inside the [onStateReceive](https://github.com/maticnetwork/genesis-contracts/blob/05556cfd91a6879a8190a6828428f50e4912ee1a/contracts/IStateReceiver.sol#L5) function.
 
-The latest version, [Heimdall v.0.2.9](https://github.com/maticnetwork/heimdall/releases/tag/v0.2.9), contains a few enhancements such as:
+The latest version, [Heimdall v.0.2.11](https://github.com/maticnetwork/heimdall/releases/tag/v0.2.11), contains a few enhancements such as:
 1. Restricting data size in state sync txs to:
     * **30Kb** when represented in **bytes**
     * **60Kb** when represented as **string**.

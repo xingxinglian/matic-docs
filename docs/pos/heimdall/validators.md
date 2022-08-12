@@ -1,7 +1,7 @@
 ---
 id: validators
 title: Validators
-description: Validators are an essential part of the Heimdall. Heimdall has an option to change validators at the end of each block.
+description: "Heimdall's structure for validators." 
 keywords:
   - docs
   - matic

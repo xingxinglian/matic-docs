@@ -1,7 +1,7 @@
 ---
 id: validator-key-management
 title: Validator key management
-description: Each validator uses two keys to manage validator related activities on Polygon, Signer Key & Owner Key.
+description: "Signer and Owner Key validator management."
 keywords:
   - docs
   - matic

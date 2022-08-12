@@ -32,7 +32,7 @@ To log into the Polygon Web Wallet you need to access the following URL: https:/
 
 To log into the testnet version of Polygon Web Wallet, you need to access the following URL: https://wallet-dev.polygon.technology/.
 
-To learn how to connect Polygon to Metamask, please refer to this [guide](hhttps://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/).
+To learn how to connect Polygon to Metamask, please refer to this [guide](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/).
 
 Once you connect your account with the Web Wallet, you will be taken to the landing page with various means on how to transact with the web wallet. Polygon POS chain currently offers the following services:
 - The Polygon Wallet for sending, receiving and storing your assets on the Polygon network

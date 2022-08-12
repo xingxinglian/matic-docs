@@ -75,6 +75,10 @@
     "message": "View all communities",
     "description": "Navbar item with label View all communities"
   },
+    "item.label.End-user support": {
+    "message": "End-user support",
+    "description": "Navbar item with label End-user support"
+  },
   "item.label.PoS FAQ": {
     "message": "PoS FAQ",
     "description": "Navbar item with label PoS FAQ"
@@ -86,5 +90,9 @@
   "item.label.Nightfall FAQ": {
     "message": "Nightfall FAQ",
     "description": "Navbar item with label Nightfall FAQ"
+  },
+  "item.label.Edge FAQ": {
+    "message": "Edge FAQ",
+    "description": "Navbar item with label Edge FAQ"
   }
 }

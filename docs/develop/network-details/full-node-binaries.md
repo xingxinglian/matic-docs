@@ -1,6 +1,6 @@
 ---
 id: full-node-binaries
-title: Full Node Binaries
+title: Run a full node with Binaries
 description: Deploy a Full Node using binaries.
 keywords:
   - docs
@@ -359,7 +359,7 @@ sudo ln -nfs ~/.go/bin/go /usr/bin/go
 
 ***This is required for your full node***
 
-Next, install the latest version of Heimdall and services. Make sure you checkout the correct [released version](https://github.com/maticnetwork/heimdall/releases) on Git. Note that the latest version, [Heimdall v.0.2.9](https://github.com/maticnetwork/heimdall/releases/tag/v0.2.9), contains a few enhancements such as:
+Next, install the latest version of Heimdall and services. Make sure you checkout the correct [released version](https://github.com/maticnetwork/heimdall/releases) on Git. Note that the latest version, [Heimdall v.0.2.11](https://github.com/maticnetwork/heimdall/releases/tag/v0.2.11), contains a few enhancements such as:
 1. Restricting data size in state sync txs to:
     * **30Kb** when represented in **bytes**
     * **60Kb** when represented as **string**.
@@ -382,7 +382,7 @@ git clone https://github.com/maticnetwork/heimdall
 cd heimdall
 
 # Checkout to a proper version
-# For eg: git checkout v0.2.9-mainnet
+# For eg: git checkout v0.2.11-mainnet
 git checkout <TAG OR BRANCH>
 make install
 ```

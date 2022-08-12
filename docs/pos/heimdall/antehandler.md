@@ -1,7 +1,7 @@
 ---
 id: antehandler
 title: Ante handler
-description: Ante handler checks and validates the transaction. After the verification, it checks the balance of the sender for enough fees and deduct fees in case of successful transaction inclusion. 
+description: "Ante handler checks and validates the transaction." 
 keywords:
   - docs
   - matic

@@ -1,7 +1,7 @@
 ---
 id: encoder
 title: Encoder (Pulp)
-description: Heimdall needs to verify the transactions of Heimdall on the Ethereum chain. For that it uses RLP encoding to produce special transactions, like checkpoint.
+description: "RLP encoding to produce special transactions, like checkpoint."
 keywords:
   - docs
   - matic

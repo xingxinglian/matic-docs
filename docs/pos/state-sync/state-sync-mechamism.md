@@ -1,7 +1,7 @@
 ---
 id: state-sync
 title: State Sync Mechanism
-description: Build your next blockchain app on Matic.
+description: "Mechanism to read Ethereum data from Matic EVM chain."
 keywords:
   - docs
   - matic

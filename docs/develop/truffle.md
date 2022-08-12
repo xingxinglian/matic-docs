@@ -5,10 +5,24 @@ description:  "Use Truffle to deploy a Smart Contract."
 keywords:
   - docs
   - matic
+  - smart
+  - contract
+  - truffle
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
-## **Setting up the development environment**
+## Overview
+[Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
+
+### What you will learn
+This guide aims at teaching how to create a smart contract using Truffle and deploying it on Matic Network.
+
+### What you will do
+- Install and set up Truffle
+- Deploy contract on Matic Network
+- Check the deployment status on Polygonscan.
+
+## Setting up the development environment
 
 There are a few technical requirements before we start. Please install the following:
 
@@ -21,9 +35,115 @@ Once we have those installed, we only need one command to install Truffle:
 
 To verify that Truffle is installed properly, type **`truffle version`** on a terminal. If you see an error, make sure that your npm modules are added to your path.
 
-> If you're new to Truffle then please follow the [Getting Started](https://www.trufflesuite.com/docs/truffle/quickstart) by truffle, To setup the truffle environment. 
+:::note
 
-## **truffle-config**
+What follows is an adapted version of the [<ins>Truffle quickstart guide</ins>](https://www.trufflesuite.com/docs/truffle/quickstart) article. 
+:::
+
+## Creating a project
+### MetaCoin project
+
+We will use one of Truffle's boilerplates which you can find on their [Truffle Boxes](https://trufflesuite.com/boxes/) page. [MetaCoin box](https://trufflesuite.com/boxes/metacoin/) creates a token that can be transferred between accounts.
+
+1. Start by creating a new directory for this Truffle project:
+
+```bash
+mkdir MetaCoin
+cd MetaCoin
+```
+
+2. Download the MetaCoin box:
+
+```bash
+truffle unbox metacoin
+```
+
+With that last step, you have created a Truffle project cointaining folders with contracts, deployment, testing and configuration files.
+
+This is the smart contract data from the `metacoin.sol` file:
+
+```solidity
+// SPDX-License-Identifier: MIT
+// Tells the Solidity compiler to compile only from v0.8.13 to v0.9.0
+pragma solidity ^0.8.13;
+
+import "./ConvertLib.sol";
+
+// This is just a simple example of a coin-like contract.
+// It is not ERC20 compatible and cannot be expected to talk to other
+// coin/token contracts.
+
+contract MetaCoin {
+	mapping (address => uint) balances;
+
+	event Transfer(address indexed _from, address indexed _to, uint256 _value);
+
+	constructor() {
+		balances[tx.origin] = 10000;
+	}
+
+	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
+		if (balances[msg.sender] < amount) return false;
+		balances[msg.sender] -= amount;
+		balances[receiver] += amount;
+		emit Transfer(msg.sender, receiver, amount);
+		return true;
+	}
+
+	function getBalanceInEth(address addr) public view returns(uint){
+		return ConvertLib.convert(getBalance(addr),2);
+	}
+
+	function getBalance(address addr) public view returns(uint) {
+		return balances[addr];
+	}
+}
+```
+
+:::note
+
+Notice that ConvertLib is being imported just after the `pragma` statement. In this project, there are actually two smart contracts that will be deployed at the end: one is Metacoin, contatining all the send and balance logic; the other is ConvertLib, a library used to convert values.
+
+:::
+
+### Testing the contract
+
+You can run a Solidity and Javascript tests.
+
+1. In a terminal, run the Solidity test:
+
+```bash
+truffle test ./test/TestMetaCoin.sol
+```
+
+You should see the following output:
+
+![img](/img/truffle/test1.png)
+
+2. Run the JavaScript test:
+
+```bash
+truffle test ./test/metacoin.js
+```
+
+You should see the following output:
+
+![img](/img/truffle/test2.png)
+
+### Compiling the contract
+Compile the smart contract:
+
+```bash
+truffle compile
+```
+
+You will see the following output:
+
+![img](/img/truffle/compile.png)
+
+### Configuring the smart contract
+
+Before actually depolying the contract, you need to set up the `truffle-config.js` file, inserting network and compilers data. 
 
 - Go to truffle-config.js
 - Update the truffle-config with matic-network-crendentials.
@@ -57,61 +177,26 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
+        version: "0.8.13",
     }
   }
 }
 ```
 
-Notice, it requires mnemonic to be passed in for maticProvider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words. 
+Notice, it requires mnemonic to be passed in for maticProvider, this is the seed phrase for the account you'd like to deploy from. Create a new `.secret` file in the root directory and enter your 12-word mnemonic seed phrase to get started. To get the seed words from Metamask wallet, you can go to Metamask settings, then from the menu, choose Security and Privacy where you will see a button that says "reveal seed words". 
 
-## **Deploying on Matic Network**
+### Deploying on Matic Network
 
-Add Matic to your wallet using https://faucet.polygon.technology/
+Add Matic to your wallet using https://faucet.polygon.technology/.
 
-Run this command in root of the project directory:
-```js
-$ truffle migrate --network matic
-```
+Run this command in the root of the the project directory:
 
-Contract will be deployed on Matic's Mumbai Testnet, it look like this:
+![img](/img/truffle/deployed-contract.png)
 
-```js
-2_deploy_contracts.js
-=====================
+:::note
 
-   Replacing 'MyContract'
-   ------------------
-   > transaction hash:    0x1c94d095a2f629521344885910e6a01076188fa815a310765679b05abc09a250
-   > Blocks: 5            Seconds: 5
-   > contract address:    0xbFa33D565Fcb81a9CE8e7a35B61b12B04220A8EB
-   > block number:        2371252
-   > block timestamp:     1578238698
-   > account:             0x9fB29AAc15b9A4B7F17c3385939b007540f4d791
-   > balance:             79.409358061899298312
-   > gas used:            1896986
-   > gas price:           0 gwei
-   > value sent:          0 ETH
-   > total cost:          0 ETH
+Remember your address, transaction_hash and other details provided would differ. Above is just to provide an idea of the structure.
 
-   Pausing for 2 confirmations...
-   ------------------------------
-   > confirmation number: 5 (block: 2371262)
-initialised!
+:::
 
-   > Saving migration to chain.
-   > Saving artifacts
-   -------------------------------------
-   > Total cost:                   0 ETH
-
-
-Summary
-=======
-> Total deployments:   2
-> Final cost:          0 ETH
-```
-
-> Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.
-
-**Congratulations!** You have successfully deployed HelloWorld Smart Contract. Now you can interact with the Smart Contract.
-
-You can check the deployment status here: https://mumbai.polygonscan.com/
+**Congratulations! You have successfully deployed a Smart Contract using Truffle. Now you can interact with it check its deployment status here: https://mumbai.polygonscan.com/.**

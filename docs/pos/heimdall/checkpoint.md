@@ -1,7 +1,7 @@
 ---
 id: checkpoint
 title: Checkpoint
-description: Checkpoints are the most crucial part of the Polygon protocol. It represents snapshots of the Bor chain state and is supposed to be attested by 2/3+ of the validator set before it is validated and submitted on the contracts deployed on Ethereum.
+description: "Snapshots of the Bor chain state submitted to Ethereum."
 keywords:
   - docs
   - matic
