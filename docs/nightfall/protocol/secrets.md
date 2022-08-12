@@ -12,6 +12,7 @@ keywords:
   - key
 image: https://matic.network/banners/matic-network-16x9.png
 ---
+import katex from 'katex';
 
 ## Overview
 
@@ -39,6 +40,8 @@ The encryption process involves 2 steps: a KEM step to derive a symmetric encryp
 ### Key Encapsulation Method (Encryption)
 Using the previously generated asymmetric private key, we obtain a shared secret, $key_{DH}$, using standard Diffie-Hellman. This is hashed alongside the ephemeral public key to obtain the encryption key.
 $$ key_{DH} \coloneqq x_eQ_r \qquad key_{enc} \coloneqq H_{K}(key_{DH} \; + \;Q_e)$$
+
+
 
 where  
 $Q_r$ is the recipient's public key  
