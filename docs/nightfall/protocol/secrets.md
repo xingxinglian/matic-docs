@@ -29,7 +29,7 @@ Use Elliptic curve (here we use Baby Jubjub curve) `E` over a finite field `Fp` 
 prime and `G` is the generator.
 
 Alice generates a random ephemeral asymmetric key-pair $(x_e, Q_e)$:  
-$$ x_e \; \leftarrow\; \{0, 1\}^{256} \qquad Q_e \coloneqq x_eG $$
+$x_e \; \leftarrow\; \{0, 1\}^{256} \qquad Q_e \coloneqq x_eG$
 
 These keys are only used once, and are unique to this transaction, giving us perfect forward secrecy.
 
@@ -39,8 +39,8 @@ The encryption process involves 2 steps: a KEM step to derive a symmetric encryp
 
 ### Key Encapsulation Method (Encryption)
 Using the previously generated asymmetric private key, we obtain a shared secret, $key_{DH}$, using standard Diffie-Hellman. This is hashed alongside the ephemeral public key to obtain the encryption key.
-$$ key_{DH} \coloneqq x_eQ_r \qquad key_{enc} \coloneqq H_{K}(key_{DH} \; + \;Q_e)$$
 
+$key_{DH} \coloneqq x_eQ_r \qquad key_{enc} \coloneqq H_{K}(key_{DH} \; + \;Q_e)$
 
 
 where  
@@ -52,7 +52,7 @@ $Domain_{K} \coloneqq \text{to\_field}(\text{SHA256}(\text{'nightfall-kem'}))$
 ### Data Encapsulation Method (Encryption)
 For circuit efficiency, the encryption used is a block cipher in counter mode where the cipher algorithm is a mimc hash. Given the ephemeral keys are unique to each transaction, there is no need for a nonce to be included. The encryption of the $i^{th}$ message is as follows:  
 
-$$ c_i \coloneqq H_{D}(key_{enc} + i) + p_i$$  
+$c_i \coloneqq H_{D}(key_{enc} + i) + p_i$
 
 where  
 $H_{D}(x) \coloneqq \text{MIMC}(Domain_{D}, x)$  
@@ -98,12 +98,15 @@ where 78051874391181984688098968222999738975931083794940792138705622082294921090
 zkpPublicKey = zkpPrivateKey * G
 ```
 
+If either `rootKey` or `mnemonic` is compromised, then the adversary can calculate the `zkpPrivateKey` and `nullifierKey`.
+The `zkpPrivateKey` can be used to decrypt secrets of a commitment whilst the `nullifierKey` can be used to spend the commitment.
+Hence `rootKey` and `mnemonic` must be stored very securely.
+
 The apps which will use the `ZkpKeys` to generate these keys can store the `rootKey` in different devices by splitting
-this into shares using Shamir Secret Sharing. If either `rootKey` or `mnemonic` is compromised, then the adversary
-can calculate the `zkpPrivateKey` and `nullifierKey`. The `zkpPrivateKey` can be used to decrypt secrets of a commitment
-whilst the `nullifierKey` can be used to spend the commitment. Hence `rootKey` and `mnemonic` must be stored very securely.
+this into shares using Shamir Secret Sharing.
+
 It is also recommended to store `zkpPrivateKey` and `nullifierKey` separately to avoid theft of commitments in case one of these
 is compromised.
 
-The figure below is a representation of the steps followed to derive the different keys in Nightfall
+The figure below shows the steps to derive the different keys in Nightfall
 ![](../imgs/key-derivation.png)

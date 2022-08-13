@@ -910,17 +910,6 @@ module.exports = {
             "nightfall/protocol/protocol"
           ]
         },
-        {
-          type: "category",
-          label: "Proposers & Challengers",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "nightfall/protocol/proposers",
-            "nightfall/protocol/challengers"
-          ]
-        }
       ]
     },
     {

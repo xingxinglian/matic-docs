@@ -1,3 +1,2 @@
 - Add final contract addresses
 - Add SDK information
-- Fill challenger page

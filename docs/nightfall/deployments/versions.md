@@ -32,9 +32,9 @@ Regarding performance, transactions now are optimized so that it takes shorter t
 
 | Operations| Constraints before | Constrains after | 
 |-----------|--------------------|------------------|
-| Deposit   | 84,766             |  923             |
-| Transfer  | 499,119	         | 63,191           |
-| Withdraw  |  168,883           | 50,244           |
+| Deposit   | 84,766             |  1277            |
+| Transfer  | 499,119	         | 67,694           |
+| Withdraw  |  168,883           | 53,348           |
 
 Part of the optimization has been possible by switching to Poseidon
 
