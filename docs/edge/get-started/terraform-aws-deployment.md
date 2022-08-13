@@ -30,7 +30,6 @@ that is production ready as the validator nodes are spanned across multiple avai
 
 ### System tools
 * [terraform](https://www.terraform.io/)
-* [git cli](https://github.com/git-guides/install-git)
 * [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 * [aws access key ID and secret access key](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-prereqs.html#getting-started-prereqs-keys)
 
@@ -40,7 +39,7 @@ Three variables that must be provided, before running the deployment:
 * `account_id` - the AWS account ID that the Polygon Edge blockchain cluster will be deployed on.
 * `alb_ssl_certificate` - the ARN of the certificate from AWS Certificate Manager to be used by ALB for https protocol.   
   The certificate must be generated before starting the deployment, and it must have **Issued** status.
-* `premine` - the account/s that will receive pre mined native currency.
+* `premine` - the account that will receive pre mined native currency.
   Value must follow the official [CLI](cli-commands#genesis-flags) flag specification.
 
 ## Deployment information
@@ -74,16 +73,18 @@ This deployment uses `ubuntu-focal-20.04-amd64-server` AWS AMI. It will **not** 
 
 If, for some reason, base AMI is required to get updated,
 it can be achieved by running `terraform taint` command for each instance, before `terraform apply`.   
-Instances can be tainted by running the `terraform taint module.instances[<AZ>].aws_instance.polygon_edge_instance` command,
-where `<AZ>` is the availability zone
-Example with default configuration:
+Instances can be tainted by running the    
+`terraform taint module.instances[<instance_number>].aws_instance.polygon_edge_instance` command.
+
+Example:
 ```shell
-terraform taint module.instances[\"us-west-2a\"].aws_instance.polygon_edge_instance
-terraform taint module.instances[\"us-west-2b\"].aws_instance.polygon_edge_instance
-terraform taint module.instances[\"us-west-2c\"].aws_instance.polygon_edge_instance
-terraform taint module.instances[\"us-west-2d\"].aws_instance.polygon_edge_instance
+terraform taint module.instances[0].aws_instance.polygon_edge_instance
+terraform taint module.instances[1].aws_instance.polygon_edge_instance
+terraform taint module.instances[2].aws_instance.polygon_edge_instance
+terraform taint module.instances[3].aws_instance.polygon_edge_instance
 terraform apply
 ```
+
 :::info
 In a production environment `terraform taint` should be run one-by-one in order to keep the blockchain network functional.
 :::
@@ -91,34 +92,67 @@ In a production environment `terraform taint` should be run one-by-one in order 
 ## Deployment procedure
 
 ### Pre deployment steps
-* clone the official terraform scripts repository  
-`git clone https://github.com/aws-ia/terraform-aws-polygon-technology-edge`
-* enter the cloned directory    `cd terraform-polygon-technology-edge`
+* read through [polygon-technology-edge](https://registry.terraform.io/modules/aws-ia/polygon-technology-edge/aws) terraform registry readme
+* add `polygon-technology-edge` module to your `main.tf` file using *provision instructions* on modules readme page
 * run `terraform init` command to install all necessary Terraform dependencies
 * provide a new certificate in [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
 * make sure that the provided certificate is in **Issued** state and take a note of certificate's **ARN**
+* set up your output statement in order to get modules' output in the cli
+
+#### `main.tf` example
+```terraform
+module "polygon-edge" {
+  source  = "aws-ia/polygon-technology-edge/aws"
+  version = ">=0.0.1"
+
+  account_id          = var.account_id
+  premine             = var.premine
+  alb_ssl_certificate = var.alb_ssl_certificate
+}
+
+output "json_rpc_dns_name" {
+  value       = module.polygon-edge.jsonrpc_dns_name
+  description = "The dns name for the JSON-RPC API"
+}
+
+variable "account_id" {
+  type        = string
+  description = "Your AWS Account ID"
+}
+
+variable "premine" {
+  type        = string
+  description = "Public account that will receive premined native currency"
+}
+
+variable "alb_ssl_certificate" {
+  type        = string
+  description = "The ARN of SSL certificate that will be placed on JSON-RPC ALB"
+}
+```
+
+#### `terraform.tfvars` example
+```terraform
+account_id          = "123456789"
+premine             = "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+alb_ssl_certificate = "arn:aws:acm:us-west-2:123456789:certificate/64c7f117-61f5-435e-878b-83186676a8af"
+```
 
 ### Deployment steps
 * create `terraform.tfvars` file
-* set the required terraform variables in this file (as explained above). For example: 
-  ```shell
-  account_id          = "123456789"
-  premine             = "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
-  alb_ssl_certificate = "arn:aws:acm:us-west-2:123456789:certificate/64c7f117-61f5-435e-878b-83186676a8af"
-  ```
+* set the required terraform variables in this file (as explained above).
   :::info
   There are other non-mandatory variables that can fully customize this deployment. 
-  You can override the default values by adding them to the `terraform.tfvars` file.   
+  You can override the default values by adding your own to the `terraform.tfvars` file.   
 
-  Specification of all available variables can be found in the GitHub repo ***[README](https://github.com/MVPWorkshop/terraform-polygon-technology-edge/blob/b2ef879753ed2377ad856ffa6613bd53cf3659ea/README.md)***
+  Specification of all available variables can be found in modules' Terraform ***[registry](https://registry.terraform.io/modules/aws-ia/polygon-technology-edge/aws)***
   :::
 * make sure that you've set up an aws cli authentication properly by running `aws s3 ls` - there should be no errors
-* create a new VPC `terraform apply -target=module.vpc`
-* create the rest of the infrastructure `terraform apply`
+* deploy the infrastructure `terraform apply`
 
 ### Post deployment steps
-* once the deployment is finished, take note of the `jsonrpc_dns_name` variable printed in the cli
-* create a public dns cname record pointing your domain name to the provided `jsonrpc_dns_name` value. For example:
+* once the deployment is finished, take note of the `json_rpc_dns_name` variable value printed in the cli
+* create a public dns cname record pointing your domain name to the provided `json_rpc_dns_name` value. For example:
   ```shell
   # BIND syntax
   # NAME                            TTL       CLASS   TYPE      CANONICAL NAME 
