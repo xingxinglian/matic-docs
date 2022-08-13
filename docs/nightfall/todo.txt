@@ -1,2 +1,1 @@
 - Add final contract addresses
-- Add SDK information
