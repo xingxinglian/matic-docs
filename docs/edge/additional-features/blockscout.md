@@ -96,7 +96,7 @@ sudo apt -y install automake libtool inotify-tools gcc libgmp-dev make g++ git
 
 ### Optionaly install postgresql client to check your db connection
 ```bash
-sudo apt -y postgresql-client
+sudo apt -y install postgresql-client
 ```
 
 ## Part 2 - set environment variables
